@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Hello MUI</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<link rel="stylesheet" href="css/mui.min.css">
+		<link rel="stylesheet" type="text/css" href="picker/dist/css/mui.picker.all.css"/>
+		<style>
+			html,
+			body {
+				background-color: #f8f8f8;
+			}
+			
+			.title {
+				margin: 20px 15px 10px;
+				color: #6d6d72;
+				font-size: 15px;
+			}
+			
+			.timediv {
+				height: 110px;
+				width: 100%;
+				background-color: #FFFFFF;
+			}
+			
+			.timediv>span {
+				line-height: 110px;
+				margin-left: 66px;
+				margin-right: 40px;
+				font-family: "微软雅黑";
+				font-size: 24px;
+				color: #050505;
+			}
+			
+			.content {
+				margin-top: 7px;
+				width: 100%;
+			}
+			
+			.content-div {
+				height: 80px;
+				width: 100%;
+				background-color: #FFFFFF;
+				margin-top: 1px;
+			}
+			
+			.content-div>.sf {
+				line-height: 80px;
+				margin-left: 68px;
+				font-family: "微软雅黑";
+				font-size: 24px;
+				color: #050505;
+			}
+			
+			.content-div>.si {
+				line-height: 80px;
+				float: right;
+				color: #767676;
+				font-size: 24px;
+				margin-right: 60px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<!--<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">设置</h1>
+		</header>-->
+		<div id="" class="timediv">
+			<span>时间:</span>
+			<img src="imgs/btn_sjw@2x.png" style="position: absolute; top: 44px;left: 350px;" />
+			<img src="imgs/btn_sjw@2x.png" style="position: absolute; top: 44px;left: 648px;" />
+			<input style="width:220px;height: 60px;border: 1px solid #dbdbdb;margin-right: 14px;" id="starttime">
+			<img src="imgs/heng.png" style="width: 30px;position: absolute;top:55px;" />
+			<input style="width:220px;height: 60px;border: 1px solid #dbdbdb;margin-left: 58px;" id="endtime">
+			<button id="timebtn" style="margin-top:31px;margin-left: 102px;font-family:'微软雅黑';font-size:24px;width: 104px;height: 48px;background-color: #FFC600;color: #222222;border-radius: 6px;border-width: 0px;">确定</button>
+		</div>
+		<div class="content">
+			<div id="message" class="content-div">
+				<span class="sf">这里显示标题</span>
+				<span class="si">2016.10.20 09: 00</span>
+			</div>
+			<div id="push" class="content-div">
+				<span class="sf">这里显示标题</span>
+				<span class="si">2016.10.20 09: 00</span>
+			</div>
+		</div>
+	</body>
+	<script src="js/mui.min.js"></script>
+	<script src="js/jquery-2.1.0.js"></script>
+	<script src="picker/dist/js/mui.picker.all.js" type="text/javascript" charset="utf-8"></script>
+	<script>
+		mui.init();
+		var dtpicker = new mui.DtPicker({
+			type: "datetime", //设置日历初始视图模式 
+		})
+		document.getElementById('starttime').addEventListener('tap', function() {
+			dtpicker.show(
+				function (e){
+					$("#starttime").val(e.value)
+				}
+			)
+		});
+		document.getElementById('endtime').addEventListener('tap', function() {
+			dtpicker.show(
+				function (e){
+					$("#endtime").val(e.value)
+				}
+			)
+		});
+	</script>
+
+</html>

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Hello MUI</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<link rel="stylesheet" href="css/mui.min.css">
+		<link rel="stylesheet" type="text/css" href="picker/dist/css/mui.picker.all.css" />
+		<style>
+			html,
+			body {
+				width: 1536px;
+				background-color: #f8f8f8;
+			}
+			
+			.title {
+				font-size: 30px;
+				line-height: 88px;
+				color: #333;
+			}
+			
+			.small-nav-box {
+				padding: 10px 10px 0px 10px;
+				background-color: #FFFFFF;
+			}
+			
+			.seach-box {
+				background-color: #FFFFFF;
+				margin-top: 8px;
+			}
+			
+			.mui-segmented-control .mui-control-item {
+				line-height: 64px;
+			}
+			
+			.mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active {
+				color: #FFC600;
+				border-bottom: 0;
+				background: 0 0;
+			}
+			
+			.mui-tab-label-in {
+				color: #FFC600;
+			}
+			
+			.small-nav {
+				height: 64px;
+				font-size: 24px;
+				color: #222222;
+			}
+			
+			.mui-active>.ma-div {
+				border-bottom: 4px solid #FFC600;
+				width: 129px;
+				height: 64px;
+				margin: auto;
+			}
+			
+			img {
+				margin: 0;
+				padding: 0;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="small-nav-box">
+			<div id="segmentedControl" class="mui-segmented-control mui-segmented-control-inverted mFont">
+				<a class="small-nav mui-control-item mui-active mFont " href="#item1">
+					<div class="ma-div">全部</div>
+				</a>
+				<a class="small-nav mui-control-item mFont" href="#item2">
+					<div class="ma-div">待取件</div>
+				</a>
+				<a class="small-nav mui-control-item mFont" href="#item3">
+					<div class="ma-div">处理中</div>
+				</a>
+				<a class="small-nav mui-control-item mFont" href="#item4">
+					<div class="ma-div">待收件</div>
+				</a>
+				<a class="small-nav mui-control-item mFont" href="#item5">
+					<div class="ma-div">取单</div>
+				</a>
+			</div>
+		</div>
+		<div class="seach-box">
+			<div class="mui-row" style="margin-left: 14px;">
+				<div style="float: left; margin-left: 50px; margin-top: 33px;">
+					<label style="font-size: 24px; color: #222222;height: 64px;line-height: 64px;">订单编号:</label><input type="text" name="" id="queryStepOrderNum" value="" style="width: 230px; height: 64px; font-size: 24px; margin-left: 24px;" />
+				</div>
+				<div style="float: left; margin-left: 50px; margin-top: 33px;">
+					<label style="font-size: 24px; color: #222222;height: 64px;line-height: 64px;">客人名称:</label><input type="text" name="" id="queryStepOrderNum" value="" style="width: 230px; height: 64px; font-size: 24px; margin-left: 24px;" />
+				</div>
+				<div style="float: left; margin-left: 50px; margin-top: 33px;">
+					<label style="font-size: 24px; color: #222222;height: 64px;line-height: 64px;">标识牌号码:</label><input type="text" name="" id="queryStepOrderNum" value="" style="width: 230px; height: 64px; font-size: 24px; margin-left: 24px;" />
+				</div>
+				<div style="float: right; margin-top: 40px; margin-right: 74px;"><img src="imgs/icn_ewm@2x.png"></div>
+			</div>
+			<div class="mui-row" style="margin-left: 14px;">
+				<div style="float: left; margin-left: 50px; margin-top: 33px; margin-bottom: 34px;">
+					<!--<label style="font-size: 24px; color: #222222;height: 64px;line-height: 64px; float: left;">下单时间:</label>
+					<div style="width: 230px; height: 64px; font-size: 24px; margin-left: 24px; border: 1px solid #ccc; float: left;">
+						<input id="starttime"style="width: 180px; height: 61px; font-size: 24px;  border: 0px;" />
+						<a style="height: 62px; line-height: 62px;"><img src="imgs/btn_sjw@2x.png" style="position: relative; left: auto; top:5px;" /></a>
+					</div>
+					<span style="height: 64px; line-height: 64px; width: 30px; margin-top: -5px; float: left;"><img src="imgs/heng.png" style="margin-left: 15px; margin-right: 6px;"></span>
+					<div style="width: 230px; height: 64px; font-size: 24px; margin-left: 29px; border: 1px solid #ccc; float: left;">
+						<input  id="endtime" style="width: 180px; height: 61px; font-size: 24px;  border: 0px;" />
+						<a style="height: 62px; line-height: 62px;"><img src="imgs/btn_sjw@2x.png" style="position: relative; left: auto; top:5px;" /></a>
+					</div>-->
+					<span style="font-size: 24px; color: #222222;height: 64px;line-height: 64px; float: left;">下单时间:</span>
+					<img src="imgs/btn_sjw@2x.png" style="position: absolute; top: 248px;left: 382px;" />
+					<img src="imgs/btn_sjw@2x.png" style="position: absolute; top: 248px;left: 682px;" />
+					<input style="width:230px;height: 64px;border: 1px solid #dbdbdb;margin-right: 14px;margin-left:24px ;" id="starttime">
+					<span style="height: 64px; line-height: 64px; width: 30px; margin-top: -5px;"><img src="imgs/heng.png"></span>
+					<input style="width:230px;height: 64px;border: 1px solid #dbdbdb;margin-left: 14px;" id="endtime">
+				</div>
+				<div style="float: right; margin-top: 25px; margin-right: 50px;"><button type="button" class="mui-btn mui-btn-warning" style="background-color: #FFC600; font-size: 24px; color: #222222; height: 48px; width: 104px;">查询</button></div>
+			</div>
+		</div>
+		<div style="margin-top: 32px; background-color: #FFFFFF;">
+			<table style="font-size: 22px; color: #222222;">
+				<thead>
+					<tr style="height: 90px; line-height: 90px; border-top: 1px #EEEEEE solid;">
+						<td style="width: 216px; text-align: center;">订单编号</td>
+						<td style="width: 160px; text-align: center;">客人名称</td>
+						<td style="width: 226px; text-align: center;">标识牌号码</td>
+						<td style="width: 132px; text-align: center;">状态</td>
+						<td style="width: 208px; text-align: center;">当前工序</td>
+						<td style="width: 594px; text-align: center;">操作</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr style="height: 80px; border-top: 1px #EEEEEE solid;">
+						<td style="width: 216px; text-align: center;">4234552</td>
+						<td style="width: 160px; text-align: center;">陈某某</td>
+						<td style="width: 226px; text-align: center;">12</td>
+						<td style="width: 132px; text-align: center;">待取件</td>
+						<td style="width: 208px; text-align: center;">无</td>
+						<td style="width: 594px; text-align: center; padding-bottom: 16px;">
+							<button type="button" class="mui-btn mui-btn-warning" style="background-color: #FFC600; font-size: 24px; color: #222222; height: 48px; width: 80px; margin-top: 16px;">详情</button>
+							<button type="button" class="mui-btn mui-btn-warning" style="background-color: #FFC600; font-size: 24px; color: #222222; height: 48px; width: 280px; margin-left: 12px; margin-top: 16px;">确认到厂、拆分工序</button>
+							<button type="button" class="mui-btn mui-btn-warning" style="background-color: #FFC600; font-size: 24px; color: #222222; height: 48px; width: 80px; margin-left: 12px; margin-top: 16px;">返单</button>
+						</td>
+					</tr>
+					<tr style="height: 80px; border-top: 1px #EEEEEE solid; background-color: #EEEEEE;">
+						<td style="width: 216px; text-align: center;">4234552</td>
+						<td style="width: 160px; text-align: center;">陈某某</td>
+						<td style="width: 226px; text-align: center;">12</td>
+						<td style="width: 132px; text-align: center;">处理中</td>
+						<td style="width: 208px; text-align: center;">准备发货</td>
+						<td style="width: 594px; padding-bottom: 16px;" align="center">
+							<button type="button" class="mui-btn mui-btn-warning" style="background-color: #FFC600; font-size: 24px; color: #222222; height: 48px; width: 80px; margin-top: 16px;">详情</button>
+							<button type="button" class="mui-btn mui-btn-warning" style="background-color: #FFC600; font-size: 24px; color: #222222; height: 48px; width: 148px; margin-left: 12px; margin-top: 16px;">查看工序</button>
+							<button type="button" class="mui-btn mui-btn-warning" style="background-color: #FFC600; font-size: 24px; color: #222222; height: 48px; width: 182px; margin-left: 12px; margin-top: 16px;">确认发货出厂</button>
+						</td>
+					</tr>
+					<tr style="height: 80px; border-top: 1px #EEEEEE solid;">
+						<td style="width: 216px; text-align: center;">4234552</td>
+						<td style="width: 160px; text-align: center;">陈某某</td>
+						<td style="width: 226px; text-align: center;">12</td>
+						<td style="width: 132px; text-align: center;">待取件</td>
+						<td style="width: 208px; text-align: center;">已发货</td>
+						<td style="width: 594px; text-align: center; padding-bottom: 16px;">
+							<button type="button" class="mui-btn mui-btn-warning" style="background-color: #FFC600; font-size: 24px; color: #222222; height: 48px; width: 80px; margin-top: 16px;">详情</button>
+							<button type="button" class="mui-btn mui-btn-warning" style="background-color: #FFC600; font-size: 24px; color: #222222; height: 48px; width: 148px; margin-left: 12px; margin-top: 16px;">查看工序</button>
+						</td>
+					</tr>
+					<tr style="height: 80px; border-top: 1px #EEEEEE solid; background-color: #EEEEEE;">
+						<td style="width: 216px; text-align: center;">4234552</td>
+						<td style="width: 160px; text-align: center;">陈某某</td>
+						<td style="width: 226px; text-align: center;">12</td>
+						<td style="width: 132px; text-align: center;">门店已收件</td>
+						<td style="width: 208px; text-align: center;">准备发货</td>
+						<td style="width: 594px; padding-bottom: 16px;" align="center">
+							<button type="button" class="mui-btn mui-btn-warning" style="background-color: #FFC600; font-size: 24px; color: #222222; height: 48px; width: 80px; margin-top: 16px;">详情</button>
+							<button type="button" class="mui-btn mui-btn-warning" style="background-color: #FFC600; font-size: 24px; color: #222222; height: 48px; width: 148px; margin-left: 12px; margin-top: 16px;">查看工序</button>
+						</td>
+					</tr>
+					<tr style="height: 80px; border-top: 1px #EEEEEE solid;">
+						<td style="width: 216px; text-align: center;">4234552</td>
+						<td style="width: 160px; text-align: center;">陈某某</td>
+						<td style="width: 226px; text-align: center;">12</td>
+						<td style="width: 132px; text-align: center;">客人已收件</td>
+						<td style="width: 208px; text-align: center;">已发货</td>
+						<td style="width: 594px; text-align: center; padding-bottom: 16px;">
+							<button type="button" class="mui-btn mui-btn-warning" style="background-color: #FFC600; font-size: 24px; color: #222222; height: 48px; width: 80px; margin-top: 16px;">详情</button>
+							<button type="button" class="mui-btn mui-btn-warning" style="background-color: #FFC600; font-size: 24px; color: #222222; height: 48px; width: 148px; margin-left: 12px; margin-top: 16px;">查看工序</button>
+						</td>
+					</tr>
+					<tr style="height: 80px; border-top: 1px #EEEEEE solid; background-color: #EEEEEE;">
+						<td style="width: 216px; text-align: center;">4234552</td>
+						<td style="width: 160px; text-align: center;">陈某某</td>
+						<td style="width: 226px; text-align: center;">12</td>
+						<td style="width: 132px; text-align: center;">返单</td>
+						<td style="width: 208px; text-align: center;">无</td>
+						<td style="width: 594px; padding-bottom: 16px;" align="center">
+							<button type="button" class="mui-btn mui-btn-warning" style="background-color: #FFC600; font-size: 24px; color: #222222; height: 48px; width: 80px; margin-top: 16px;">详情</button>
+							<button type="button" class="mui-btn mui-btn-warning" style="background-color: #FFC600; font-size: 24px; color: #222222; height: 48px; width: 188px; margin-left: 12px; margin-top: 16px;">查看返单原因</button>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</body>
+	<script src="js/mui.min.js"></script>
+	<script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+	<script src="picker/dist/js/mui.picker.all.js" type="text/javascript" charset="utf-8"></script>
+	<script>
+		mui.init();
+		var dtpicker = new mui.DtPicker({
+			type: "datetime", //设置日历初始视图模式 
+		})
+		document.getElementById('starttime').addEventListener('tap', function() {
+			dtpicker.show(
+				function(e) {
+					$("#starttime").val(e.value)
+				}
+			)
+		});
+		document.getElementById('endtime').addEventListener('tap', function() {
+			dtpicker.show(
+				function(e) {
+					$("#endtime").val(e.value)
+				}
+			)
+		});
+	</script>
+
+</html>

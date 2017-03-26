@@ -1,0 +1,17 @@
+{
+  "login.html": {
+    "href": "login.html",
+    "resources": [
+      "css/mui.min.css",
+      "imgs/bg_gcd@2x.png",
+      "imgs/btn_sj@2x.png",
+      "imgs/kuan_srk@2x.png",
+      "imgs/btn_bc@2x.png",
+      "imgs/lgogo@2x.png",
+      "imgs/icn_gc@2x.png",
+      "imgs/icn_sj@2x.png"
+    ],
+    "refer": [],
+    "priority": 0
+  }
+}

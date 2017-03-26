@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Hello MUI</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<link rel="stylesheet" href="css/mui.min.css">
+		<style>
+			html,
+			body {
+				background-color: #f8f8f8;
+				font-family: "微软雅黑";
+				font-size: 20px;
+				color: #050505;
+			}
+			
+			span {
+				font-family: "微软雅黑";
+				font-size: 24px;
+				color: #050505;
+			}
+			
+			.title {
+				margin: 20px 15px 10px;
+				color: #6d6d72;
+				font-size: 15px;
+			}
+			
+			.update-version {
+				width: 100%;
+				height: 110px;
+				background-color: #FFFFFF;
+			}
+			
+			.now-version {
+				line-height: 110px;
+				margin-left: 68px;
+			}
+			
+			.jczxbb {
+				position: absolute;
+				right: 68px;
+				top: 18px;
+				background-image: url(imgs/btn_jczxbb@2x.png);
+				width: 500px;
+				height: 64px;
+				text-align: center;
+			}
+			
+			#jczxbbSpan {
+				line-height: 64px;
+			}
+			
+			#tcdl {
+				background-image: url(imgs/btn_jczxbb@2x.png);
+				width: 500px;
+				height: 64px;
+				font-family: "微软雅黑";
+				font-size: 30px;
+				color: #050505;
+				position: absolute;
+				left: 518px;
+				bottom: 126px;
+				text-align: center;
+			}
+			
+			#tcdl>span {
+				line-height: 64px;
+				font-size: 30px;
+			}
+			
+			.content {
+				margin-top: 7px;
+				width: 100%;
+			}
+			
+			.content-div {
+				height: 80px;
+				width: 100%;
+				background-color: #FFFFFF;
+				margin-top: 1px;
+			}
+			
+			.content-div>.sf {
+				line-height: 80px;
+				margin-left: 68px;
+			}
+			
+			.content-div>.si {
+				line-height: 80px;
+				float: right;
+				font-size: 50px;
+				color: #b2b2b2;
+				margin-right: 38px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<!--<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">设置</h1>
+		</header>-->
+		<div id="updateVersion" class="update-version">
+			<span class="now-version">当前版本：V1.12.15</span>
+			<div id="jczxbb" class="jczxbb"><span id="jczxbbSpan">
+				检查是否最新版本，并更新
+			</span></div>
+		</div>
+		<div class="content">
+			<div id="message" class="content-div">
+				<span class="sf">消息列表</span>
+				<span class="mui-icon mui-icon-arrowright si"></span>
+			</div>
+			<div id="push" class="content-div">
+				<span class="sf">推送列表</span>
+				<span class="mui-icon mui-icon-arrowright si"></span>
+			</div>
+		</div>
+		<div id="tcdl">
+			<span>退出登录</span>
+		</div>
+	</body>
+	<script src="js/mui.min.js"></script>
+	<script>
+		mui.init({
+			//swipeBack: true //启用右滑关闭功能
+		});
+		//		document.getElementById("about").addEventListener('tap', function() {
+		//			//获得主页面的webview
+		//			var main = plus.webview.currentWebview().parent();
+		//			//触发主页面的gohome事件
+		//			mui.fire(main, 'gohome');
+		//		});
+		document.getElementById("message").addEventListener('tap', function(e) {
+			//更换标题
+			//title.innerHTML = "消息列表";
+			//显示目标选项卡
+			location.href = "setup-message.html";
+		});
+		document.getElementById("push").addEventListener('tap',function(e) {
+			//更换标题
+			//title.innerHTML = "推送列表";
+			//显示目标选项卡
+location.href = "setup-push.html";
+		});
+	</script>
+
+</html>
