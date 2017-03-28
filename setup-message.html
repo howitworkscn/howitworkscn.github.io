@@ -97,6 +97,12 @@
 	<script src="picker/dist/js/mui.picker.all.js" type="text/javascript" charset="utf-8"></script>
 	<script>
 		mui.init();
+		if(window.screen.width != 1536)
+		{
+			var _scale = window.screen.width/1536
+			$("meta").attr("content","width=device-width, initial-scale="+_scale+",minimum-scale="+_scale+",maximum-scale="+_scale+",user-scalable=no")
+		}
+			
 		var dtpicker = new mui.DtPicker({
 			type: "datetime", //设置日历初始视图模式 
 		})
@@ -114,6 +120,7 @@
 				}
 			)
 		});
+		
 	</script>
 
 </html>

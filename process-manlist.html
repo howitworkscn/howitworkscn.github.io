@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Hello MUI</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<link rel="stylesheet" href="css/mui.min.css">
+		<style>
+			html,body {
+				background-color: #f8f8f8;
+			}
+			.title{
+				font-size: 30px;
+				line-height: 88px;
+				color: #333;
+			}
+			.small-nav-box{
+            	padding: 10px 10px 0px 10px;
+            	background-color: #FFFFFF;
+            }
+            .seach-box{
+            	background-color: #FFFFFF;
+            	margin-top: 32px;
+            }
+            .mui-segmented-control .mui-control-item{
+				line-height: 64px;
+			}
+			.mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active {
+                color: #FFC600;
+                border-bottom: 0;
+                background: 0 0;
+            }
+			.mui-tab-label-in{
+				color: #FFC600;
+			}
+			.small-nav{
+				height: 64px; 
+				font-size: 24px; 
+				color: #222222;
+			}
+			.mui-active >div{
+				
+				border-bottom: 4px solid #FFC600; width: 129px; height: 64px; margin: auto;
+			}
+		</style>
+	</head>
+	<body>
+		<div style="background-color: #FFFFFF; font-size: 24px; color: #222222; padding-left: 64px; overflow: hidden;">
+			<div style="padding-top: 36px; padding-bottom: 24px; overflow: hidden;">
+					<div>
+						<span>当前工序：</span>
+						<span style="padding-left: 40px;">技师施工</span>
+						<span style="padding-left: 130px;">当前服务项目：</span>
+						<span style="padding-left: 54px;">维修</span>
+					</div>
+					<div>
+						<div style="padding-top: 44px; padding-bottom: 24px;">当前负责的技工：</div>
+					</div>
+					<div>
+						<div>
+							<div style="width: 810px; background-color: #EEEEEE; height: 60px; line-height: 60px; float: left;">
+								<span style="margin-left: 32px;">23425</span>
+								<span style="margin-left: 110px;">陈某某</span>
+								<span style="margin-left: 104px;">技师施工</span>
+								<span style="margin-left: 100px;">2</span>
+								<span style="margin-left: 124px;">无</span>
+							</div>
+							
+							<div style="padding-left: 204px; float: left; padding-top: 6px;">
+								<button type="button" class="mui-btn mui-btn-warning" style="background-color: #FFC600; font-size: 24px; color: #222222; height: 48px; width: 104px;">确定</button>
+							</div>
+						</div>						
+					</div>
+			</div>
+		</div>
+		<div class="seach-box">
+			<div class="mui-row" style="margin-left: 14px;">
+				<div style="float: left; margin-left: 50px; margin-top: 33px;">
+					<label style="font-size: 24px; color: #222222;height: 64px;line-height: 64px;">订单编号:</label><input type="text" name="" id="queryStepOrderNum" value="" style="width: 230px; height: 64px; font-size: 24px; margin-left: 42px;" />
+				</div>
+				<div style="float: left; margin-left: 50px; margin-top: 33px;">
+					<label style="font-size: 24px; color: #222222;height: 64px;line-height: 64px;">工单编号:</label><input type="text" name="" id="queryStepOrderNum" value="" style="width: 230px; height: 64px; font-size: 24px; margin-left: 42px;" />
+				</div>
+			</div>
+			<div class="mui-row" style="margin-left: 14px;">
+				<div style="float: left; margin-left: 50px; margin-top: 33px;">
+					<label style="font-size: 24px; color: #222222;height: 64px;line-height: 64px;">标识牌号码:</label><input type="text" name="" id="queryStepOrderNum" value="" style="width: 230px; height: 64px; font-size: 24px; margin-left: 19px;" />
+				</div>
+				<div style="float: left; margin-top: 36px; margin-left: 637px;"><button type="button" class="mui-btn mui-btn-warning" style="background-color: #FFC600; font-size: 24px; color: #222222; height: 48px; width: 104px;">查询</button></div>
+			</div>
+		</div>
+		<div style="margin-top: 14px; background-color: #FFFFFF;">
+			<table style="font-size: 22px; color: #222222;">
+				<thead>
+					<tr style="height: 90px; line-height: 90px; border-top: 1px #EEEEEE solid;">
+						<td style="width: 192px; text-align: center;">技工账号</td>
+						<td style="width: 136px; text-align: center;">技工名称</td>
+						<td style="width: 252px; text-align: center;">负责工序</td>
+						<td style="width: 142px; text-align: center;">当前工单数</td>
+						<td style="width: 288px; text-align: center;">负责服务</td>
+						<td style="width: 526px; text-align: center;">操作</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr style="height: 150px; line-height: 150px; border-top: 1px #EEEEEE solid;">
+						<td style="width: 192px; text-align: center;">12</td>
+						<td style="width: 136px; text-align: center;">35467</td>
+						<td style="width: 252px; text-align: center;">清洗</td>
+						<td style="width: 142px; text-align: center;">2</td>
+						<td style="width: 288px; text-align: center;">维修</td>
+						<td style="width: 526px; text-align: center;">
+							<button type="button" class="mui-btn mui-btn-warning" style="background-color: #FFC600; font-size: 24px; color: #222222; height: 48px; width: 126px; vertical-align: middle;">指派</button>
+						</td>
+					</tr>
+					<tr style="height: 150px; line-height: 150px; border-top: 1px #EEEEEE solid; background-color: #EEEEEE;">
+						<td style="width: 192px; text-align: center;">12</td>
+						<td style="width: 136px; text-align: center;">23456</td>
+						<td style="width: 252px; text-align: center;">清洗</td>
+						<td style="width: 142px; text-align: center;">4</td>
+						<td style="width: 288px; text-align: center;">维修</td>
+						<td style="width: 526px; text-align: center;">
+							<button type="button" class="mui-btn mui-btn-warning" style="background-color: #FFC600; font-size: 24px; color: #222222; height: 48px; width: 126px; vertical-align: middle;">指派</button>
+						</td>
+					</tr>
+					<tr style="height: 150px; line-height: 150px; border-top: 1px #EEEEEE solid;  color: #ff4545;">
+						<td style="width: 192px; text-align: center;">12</td>
+						<td style="width: 136px; text-align: center;">34524</td>
+						<td style="width: 252px; text-align: center;">翻新</td>
+						<td style="width: 142px; text-align: center;">8</td>
+						<td style="width: 288px; text-align: center;">维修</td>
+						<td style="width: 526px; text-align: center;">
+							<button type="button" class="mui-btn mui-btn-warning" style="background-color: #FFC600; font-size: 24px; color: #222222; height: 48px; width: 126px; vertical-align: middle;">指派</button>
+						</td>
+					</tr>
+					<tr style="height: 150px; line-height: 150px; border-top: 1px #EEEEEE solid; background-color: #EEEEEE; color: #ff4545;">
+						<td style="width: 192px; text-align: center;">12</td>
+						<td style="width: 136px; text-align: center;">53467</td>
+						<td style="width: 252px; text-align: center;">翻新</td>
+						<td style="width: 142px; text-align: center;">8</td>
+						<td style="width: 288px; text-align: center;">维修</td>
+						<td style="width: 526px; text-align: center;">
+							<button type="button" class="mui-btn mui-btn-warning" style="background-color: #b5b5b5; font-size: 24px; color: #222222; height: 48px; width: 126px; vertical-align: middle;">没登录</button>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</body>
+	<script src="js/mui.min.js"></script>
+	<script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" charset="utf-8"> 
+		if(window.screen.width != 1536)
+		{
+			var _scale = window.screen.width/1536
+			$("meta").attr("content","width=device-width, initial-scale="+_scale+",minimum-scale="+_scale+",maximum-scale="+_scale+",user-scalable=no")
+		}
+		mui.init();
+		
+	</script>
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Hello MUI</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<link rel="stylesheet" href="css/mui.min.css">
+		<style>
+			html,body {
+				background-color: #f8f8f8;
+			}
+			.title{
+				font-size: 30px;
+				line-height: 88px;
+				color: #333;
+			}
+			.small-nav-box{
+            	padding: 10px 10px 0px 10px;
+            	background-color: #FFFFFF;
+            }
+            .seach-box{
+            	background-color: #FFFFFF;
+            	margin-top: 8px;
+            }
+            .mui-segmented-control .mui-control-item{
+				line-height: 64px;
+			}
+			.mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active {
+                color: #FFC600;
+                border-bottom: 0;
+                background: 0 0;
+            }
+			.mui-tab-label-in{
+				color: #FFC600;
+			}
+			.small-nav{
+				height: 64px; 
+				font-size: 24px; 
+				color: #202202;
+			}
+			.mui-active >div{
+				
+				border-bottom: 4px solid #FFC600; width: 129px; height: 64px; margin: auto;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="small-nav-box">
+			<div id="segmentedControl" class="mui-segmented-control mui-segmented-control-inverted mFont">
+				<a class="small-nav mui-control-item mui-active mFont " href="#item1">
+					<div >全部</div>
+				</a>
+				<a class="small-nav mui-control-item mFont" href="#item2">
+					<div >工前检验</div>
+				</a>
+				<a class="small-nav mui-control-item mFont" href="#item3">
+					<div >技师施工</div>
+				</a>
+				<a class="small-nav mui-control-item mFont" href="#item4">
+					<div>工后验货</div>
+				</a>
+				<a class="small-nav mui-control-item mFont" href="#item5">
+					<div>包装</div>
+				</a>
+				<a class="small-nav mui-control-item mFont" href="#item5">
+					<div>准备发货</div>
+				</a>
+				</div>
+		</div>
+		<div class="seach-box">
+			<div class="mui-row" style="margin-left: 14px;">
+				<div style="float: left; margin-left: 50px; margin-top: 33px;">
+					<label style="font-size: 24px; color: #202202;height: 64px;line-height: 64px;">订单编号:</label><input type="text" name="" id="queryStepOrderNum" value="" style="width: 230px; height: 64px; font-size: 24px; margin-left: 24px;" />
+				</div>
+				<div style="float: left; margin-left: 50px; margin-top: 33px;">
+					<label style="font-size: 24px; color: #202202;height: 64px;line-height: 64px;">服务项目:</label><input type="text" name="" id="queryStepOrderNum" value="" style="width: 230px; height: 64px; font-size: 24px; margin-left: 24px;" />
+				</div>
+				<div style="float: left; margin-left: 50px; margin-top: 33px;">
+					<label style="font-size: 24px; color: #202202;height: 64px;line-height: 64px;">用户手机号码:</label><input type="text" name="" id="queryStepOrderNum" value="" style="width: 230px; height: 64px; font-size: 24px; margin-left: 24px;" />
+				</div>
+			</div>
+			<div class="mui-row" style="margin-left: 14px;">
+				<div style="float: left; margin-left: 50px; margin-top: 33px;">
+					<label style="font-size: 24px; color: #202202;height: 64px;line-height: 64px;">技工账号:</label><input type="text" name="" id="queryStepOrderNum" value="" style="width: 230px; height: 64px; font-size: 24px; margin-left: 24px;" />
+				</div>
+				<div style="float: left; margin-left: 50px; margin-top: 33px;">
+					<label style="font-size: 24px; color: #202202;height: 64px;line-height: 64px;">标识牌号码:</label><input type="text" name="" id="queryStepOrderNum" value="" style="width: 230px; height: 64px; font-size: 24px; margin-left: 24px;" />
+				</div>
+				<div style="float: left; margin-top: 36px; margin-left: 106px;"><button type="button" class="mui-btn mui-btn-warning" style="background-color: #FFC600; font-size: 24px; color: #202202; height: 48px; width: 104px;">查询</button></div>
+			</div>
+		</div>
+		<div style="margin-top: 32px; background-color: #FFFFFF;">
+			<table style="font-size: 22px; color: #202202;">
+				<thead>
+					<tr style="height: 90px; line-height: 90px; border-top: 1px #EEEEEE solid;">
+						<td style="width: 168px; text-align: center;">标识牌号码</td>
+						<td style="width: 120px; text-align: center;">订单编号</td>
+						<td style="width: 200px; text-align: center;">手机号码</td>
+						<td style="width: 134px; text-align: center;">服务项目</td>
+						<td style="width: 204px; text-align: center;">当前工序</td>
+						<td style="width: 102px; text-align: center;">货品到岗</td>
+						<td style="width: 202px; text-align: center;">技工账号</td>
+						<td style="width: 406px; text-align: center;">操作</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr style="height: 80px; border-top: 1px #EEEEEE solid;">
+						<td style="width: 168px; text-align: center;">12</td>
+							<td style="width: 120px; text-align: center;">35467</td>
+							<td style="width: 200px; text-align: center;">13726352418</td>
+							<td style="width: 134px; text-align: center;">清洗</td>
+							<td style="width: 204px; text-align: center;">工前质检</td>
+							<td style="width: 102px; text-align: center;">是</td>
+							<td style="width: 202px; text-align: center;">352543</td>
+							<td style="width: 406px; text-align: center; vertical-align: top; padding-top: 14px;">
+								<button type="button" class="mui-btn mui-btn-warning" style="background-color: #FFC600; font-size: 24px; color: #202202; height: 48px; width: 148px; margin-top: 2px; margin-bottom: 16px;">工序记录</button>
+								<button type="button" class="mui-btn mui-btn-warning" style="background-color: #FFC600; font-size: 24px; color: #202202; height: 48px; width: 80px; margin-left: 12px; margin-top: 2px; margin-bottom: 16px;">分配</button>
+								<button type="button" class="mui-btn mui-btn-warning" style="background-color: #FFC600; font-size: 24px; color: #202202; height: 48px; width: 168px; margin-left: 12px; margin-top: 2px; margin-bottom: 16px;">进入下一工序</button>
+								
+							</td>
+					</tr>
+					<tr style="height: 80px; border-top: 1px #EEEEEE solid; background-color: #EEEEEE;">
+						<td style="width: 168px; text-align: center;">12</td>
+							<td style="width: 120px; text-align: center;">23456</td>
+							<td style="width: 200px; text-align: center;">13726352418</td>
+							<td style="width: 134px; text-align: center;">清洗</td>
+							<td style="width: 204px; text-align: center;">技师施工</td>
+							<td style="width: 102px; text-align: center;">是</td>
+							<td style="width: 202px; text-align: center;">543253</td>
+							<td style="width: 406px; text-align: center; vertical-align: top; padding-top: 14px;">
+								<button type="button" class="mui-btn mui-btn-warning" style="background-color: #FFC600; font-size: 24px; color: #202202; height: 48px; width: 148px; margin-top: 2px; margin-bottom: 16px;">工序记录</button>
+								<button type="button" class="mui-btn mui-btn-warning" style="background-color: #FFC600; font-size: 24px; color: #202202; height: 48px; width: 80px; margin-left: 12px; margin-top: 2px; margin-bottom: 16px;">分配</button>
+								<button type="button" class="mui-btn mui-btn-warning" style="background-color: #FFC600; font-size: 24px; color: #202202; height: 48px; width: 168px; margin-left: 12px; margin-top: 2px; margin-bottom: 16px;">进入下一工序</button>
+								<button type="button" class="mui-btn mui-btn-warning" style="background-color: #FFC600; font-size: 24px; color: #202202; height: 48px; width: 168px; margin-top: 2px; margin-bottom: 16px;">货品已到岗</button>
+								<button type="button" class="mui-btn mui-btn-warning" style="background-color: #FFC600; font-size: 24px; color: #202202; height: 48px; width: 80px; margin-left: 12px; margin-top: 2px; margin-bottom: 16px;">返工</button>
+								
+							</td>
+					</tr>
+					<tr style="height: 80px; border-top: 1px #EEEEEE solid;">
+						<td style="width: 168px; text-align: center;">12</td>
+							<td style="width: 120px; text-align: center;">34524</td>
+							<td style="width: 200px; text-align: center;">13726352418</td>
+							<td style="width: 134px; text-align: center;">清洗</td>
+							<td style="width: 204px; text-align: center;">工后验货</td>
+							<td style="width: 102px; text-align: center;">是</td>
+							<td style="width: 202px; text-align: center;">253456</td>
+							<td style="width: 406px; text-align: center; vertical-align: top; padding-top: 14px;">
+								<button type="button" class="mui-btn mui-btn-warning" style="background-color: #FFC600; font-size: 24px; color: #202202; height: 48px; width: 148px; margin-top: 2px; margin-bottom: 16px;">工序记录</button>
+								<button type="button" class="mui-btn mui-btn-warning" style="background-color: #FFC600; font-size: 24px; color: #202202; height: 48px; width: 80px; margin-left: 12px; margin-top: 2px; margin-bottom: 16px;">分配</button>
+								<button type="button" class="mui-btn mui-btn-warning" style="background-color: #FFC600; font-size: 24px; color: #202202; height: 48px; width: 168px; margin-left: 12px; margin-top: 2px; margin-bottom: 16px;">进入下一工序</button>
+							</td>
+					</tr>
+					<tr style="height: 80px; border-top: 1px #EEEEEE solid; background-color: #EEEEEE;">
+						<td style="width: 168px; text-align: center;">12</td>
+							<td style="width: 120px; text-align: center;">53467</td>
+							<td style="width: 200px; text-align: center;">13726352418</td>
+							<td style="width: 134px; text-align: center;">清洗</td>
+							<td style="width: 204px; text-align: center;">包装</td>
+							<td style="width: 102px; text-align: center;">是</td>
+							<td style="width: 202px; text-align: center;">52346</td>
+							<td style="width: 406px; text-align: center; vertical-align: top; padding-top: 14px;">
+								<button type="button" class="mui-btn mui-btn-warning" style="background-color: #FFC600; font-size: 24px; color: #202202; height: 48px; width: 148px;">工序记录</button>
+							</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</body>
+	<script src="js/mui.min.js"></script>
+	<script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" charset="utf-8"> 
+		if(window.screen.width != 1536)
+		{
+			var _scale = window.screen.width/1536
+			$("meta").attr("content","width=device-width, initial-scale="+_scale+",minimum-scale="+_scale+",maximum-scale="+_scale+",user-scalable=no")
+		}
+		mui.init();
+	</script>
+</html>

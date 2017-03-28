@@ -59,6 +59,52 @@
 				color: #050505;
 				line-height: 64px;
 			}
+			
+			.content {
+				margin-top: 7px;
+				width: 100%;
+			}
+			
+			.content-div {
+				height: 80px;
+				width: 100%;
+				background-color: #FFFFFF;
+				margin-top: 1px;
+			}
+			
+			.content-div>.sf {
+				line-height: 80px;
+				margin-left: 68px;
+				font-family: "微软雅黑";
+				font-size: 24px;
+				color: #050505;
+				float: left;
+			}
+			
+			.content-div>.sff {
+				line-height: 40px;
+				margin-left: 374px;
+				font-family: "微软雅黑";
+				font-size: 24px;
+				color: #666666;
+				float: left;
+			}
+			
+			.content-div>.si {
+				line-height: 40px;
+				float: right;
+				color: #767676;
+				font-size: 24px;
+				margin-right: 60px;
+			}
+			
+			.content-div>.sicon {
+				line-height: 80px;
+				float: right;
+				color: #767676;
+				font-size: 24px;
+				margin-right: 60px;
+			}
 		</style>
 	</head>
 
@@ -74,16 +120,77 @@
 			<input style="width:220px;height: 60px;border: 1px solid #dbdbdb;margin-right: 14px;" id="starttime">
 			<img src="imgs/heng.png" style="width: 30px;position: absolute;top:55px;" />
 			<input style="width:220px;height: 60px;border: 1px solid #dbdbdb;margin-left: 58px;" id="endtime">
-			<button id="timebtn" style="margin-top:31px;margin-left: 102px;font-family:'微软雅黑';font-size:24px;width: 104px;height: 48px;background-color: #FFC600;color: #222222;border-radius: 6px;border-width: 0px;">确定</button>
+
+		</div>
+		<div class="content">
+			<div id="message" class="content-div">
+				<span class="sf">这里显示标题</span>
+				<span class="sff">
+					推送对象分类：用户端<br>
+					推送账号：123455
+				</span>
+				<span class="mui-icon mui-icon-arrowright sicon"></span>
+				<span class="si">
+					推送时间<br>
+					2016.10.20 09: 00
+				</span>
+			</div>
+			<div id="message" class="content-div">
+				<span class="sf">这里显示标题</span>
+				<span class="sff">
+					推送对象分类：用户端<br>
+					推送账号：123455
+				</span>
+				<span class="mui-icon mui-icon-arrowright sicon"></span>
+				<span class="si">
+					推送时间<br>
+					2016.10.20 09: 00
+				</span>
+			</div>
 		</div>
 		<div id="xjts">
 			<span>新建推送</span>
 		</div>
+		<div style="width: 1012px; height: 810px; background-color: #FFFFFF; padding: 58px 0 0 26px; display: block" class="mui-popup mui-popup-in">
+			<div style=" margin-bottom: 11px; overflow: hidden;">
+				<label style="font-size: 28px; color: #202020;height: 64px;line-height: 64px; float: left; width: 175px; text-align: center;">标题:</label>
+				<input type="text" name="" id="queryStepOrderNum" value="" style="width: 694px; height: 64px; border: 1px solid #bfbfbf; font-size: 28px; margin-left: 30px; float: left;" />
+			</div>
+			<div style=" margin-bottom: 26px; overflow: hidden;">
+				<label style="font-size: 28px; color: #202020;height: 64px;line-height: 64px; float: left; width: 175px; text-align: center;">推送对象分类:</label>
+				<div style="width: 694px; height: 64px; font-size: 28px; margin-left: 30px; border: 1px solid #bfbfbf; float: left;">
+					<input type="text" name="" id="queryStepOrderNum" value="" style="width: 620px; height: 52px; font-size: 28px;  border: 0px;" />
+					<a style="height: 62px; line-height: 62px;"><img src="imgs/btn_sjw@2x.png" style="position: relative; left: auto; top:5px;" /></a>
+				</div>
+			</div>
+			<div style=" margin-bottom: 26px; overflow: hidden;">
+				<label style="font-size: 28px; color: #202020;height: 64px;line-height: 64px; float: left; width: 175px; text-align: center;">推送账号:</label>
+				<div style="width: 694px; height: 64px; font-size: 28px; margin-left: 30px; border: 1px solid #bfbfbf; float: left;">
+					<input type="text" name="" id="queryStepOrderNum" value="" style="width: 620px; height: 52px; font-size: 28px;  border: 0px;" />
+					<a style="height: 62px; line-height: 62px;"><img src="imgs/btn_sjw@2x.png" style="position: relative; left: auto; top:5px;" /></a>
+				</div>
+			</div>
+			<div style=" margin-bottom: 26px; overflow: hidden;">
+				<label style="font-size: 28px; color: #202020;height: 64px;line-height: 64px; float: left; width: 175px; text-align: center;">推送内容:</label>
+				<div style="width: 694px; font-size: 28px; margin-left: 30px; float: left;">
+					<textarea style="width: 694px; height: 304px; border: 1px solid #b5b5b5; font-size: 28px; line-height: 28px; color: #a1a1a1; text-align: left; vertical-align: top; padding: 32px 30px;" id="textarea" onfocus="if(value==''){value=''}" onblur="if (value ==''){value=''}"></textarea>
+				</div>
+			</div>
+			<div style="overflow: hidden; margin-top: 62px; text-align: center;">
+				<button style="background-image: url(imgs/btn_qr@2x.png); width: 250px; height: 64px;  line-height: 52px; text-align: center; margin: auto; font-size: 28px; color: #202020;  margin-right: 48px; border: 0px;">确定</button>
+				<button style="background-image: url(imgs/btn_qx2@2x.png); width: 250px; height: 64px;  line-height: 52px; text-align: center; margin: auto; font-size: 28px; color: #202020; border: 0px;">取消</button>
+			</div>
+		</div>
+		<div class="mui-popup-backdrop mui-active" style="display: block;"></div>
 	</body>
 	<script src="js/mui.min.js"></script>
 	<script src="js/jquery-2.1.0.js"></script>
 	<script src="picker/dist/js/mui.picker.all.js" type="text/javascript" charset="utf-8"></script>
-	<script>
+	<script type="text/javascript" charset="utf-8">
+		if(window.screen.width != 1536) {
+			var _scale = window.screen.width / 1536
+			$("meta").attr("content", "width=device-width, initial-scale=" + _scale + ",minimum-scale=" + _scale + ",maximum-scale=" + _scale + ",user-scalable=no")
+		}
 		mui.init()
 		var dtpicker = new mui.DtPicker({
 			type: "datetime", //设置日历初始视图模式 

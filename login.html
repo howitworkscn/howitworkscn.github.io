@@ -10,11 +10,14 @@
 			.ui-page-login,
 			body {
 				width: 100%;
-				height: 100%;
 				margin: 0px;
 				padding: 0px;
 			}
-			.mui-content{height: 100%;}
+			
+			.mui-content {
+				height: 100%;
+			}
+			
 			.area {
 				margin: 20px auto 0px auto;
 			}
@@ -93,27 +96,35 @@
 				background-color: #ddd;
 			}
 			/*write*/
-			.mui-title{
+			
+			.mui-title {
 				font-size: 30px;
 				line-height: 88px;
 				color: #333;
 			}
-			.mui-bar{
+			
+			.mui-bar {
 				background-color: #ffc600;
 				height: 88px;
 			}
-			.mui-input-row{
+			
+			.mui-input-row {
 				width: 500px;
 				height: 64px;
 			}
-			body{
+			
+			body {
 				background-image: url(imgs/bg_gcd@2x.png);
-				background-size: cover; 
-				overflow: hidden;		
+				overflow: hidden;
 			}
-			.mui-input-row label~input, .mui-input-row label~select, .mui-input-row label~textarea{
-				float: right;width: auto;
+			
+			.mui-input-row label~input,
+			.mui-input-row label~select,
+			.mui-input-row label~textarea {
+				float: right;
+				width: auto;
 			}
+			
 			select {
 				border: solid 1px black;
 				appearance: none;
@@ -122,36 +133,48 @@
 				background: url(imgs/btn_sj@2x.png) no-repeat scroll right center transparent;
 				padding-right: 14px;
 			}
+			
 			select::-ms-expand {
 				display: none;
 			}
-			.main{
-			}
-			.head{
-				margin-top: 302px; 
+			
+			.main {}
+			
+			.head {
+				margin-top: 302px;
 				margin-bottom: 104px;
 			}
-			.mui-col-sm-8{
+			
+			.mui-col-sm-8 {
 				width: 100%;
 			}
-			#login-form{
+			
+			#login-form {
 				background: none;
 			}
-			.input{
+			
+			.input {
 				background: cover;
 				background-image: url(imgs/kuan_srk@2x.png);
 				background-repeat: no-repeat;
 				width: 500px;
-				margin:62px auto;
+				margin: 62px auto;
 			}
-			.input .input-left{
-				margin-left: 26px; width: 90%; font-size: xx-large;color: white;overflow: hidden;
+			
+			.input .input-left {
+				margin-left: 26px;
+				width: 90%;
+				font-size: xx-large;
+				color: white;
+				overflow: hidden;
 			}
-			.input-left-main{
+			
+			.input-left-main {
 				overflow: hidden;
 				float: left;
 			}
-			.input-left .input-box{
+			
+			.input-left .input-box {
 				float: right;
 				width: 330px;
 				background: 0 0;
@@ -159,27 +182,37 @@
 				line-height: 64px;
 				border: hidden;
 				margin-bottom: 0px;
-				
 			}
-			#factory{
+			
+			#factory {
 				width: 320px;
 				font-size: 28px;
 				float: right;
 				height: 64px;
-				line-height: 64px; 
+				line-height: 64px;
 				color: #ccc;
 				margin-left: 20px;
 			}
-			.input-logo-box{
-				height: 64px;float: left;
+			
+			.input-logo-box {
+				height: 64px;
+				float: left;
 			}
-			.input-logo-box img{
-				margin-top:16px;
+			
+			.input-logo-box img {
+				margin-top: 16px;
 			}
-			.input-font{
-				margin-left:12px;font-size: 28px;color: #ccc;float: left;height: 64px;line-height: 64px;
+			
+			.input-font {
+				margin-left: 12px;
+				font-size: 28px;
+				color: #ccc;
+				float: left;
+				height: 64px;
+				line-height: 64px;
 			}
-			.button{
+			
+			.button {
 				clear: both;
 				background-color: initial;
 				border: hidden;
@@ -191,16 +224,18 @@
 				font-size: 29px;
 				margin: auto;
 			}
-			.margin-botton{
+			
+			.margin-botton {
 				margin-bottom: 42px;
 			}
-			.add{
+			
+			.add {
 				font-size: 24px;
 				color: #ccc;
 				padding-left: 350px;
 				font: '微软雅黑';
 				width: 500px;
-				margin: auto;	
+				margin: auto;
 			}
 		</style>
 
@@ -210,63 +245,74 @@
 		<header class="mui-bar mui-bar-nav">
 			<h1 class="mui-title">登录</h1>
 		</header>
-		<div class="mui-row mui-text-center head" >
-				<div class="mui-col-sm-8 mui-col-xs-12">
-					<img src="imgs/lgogo@2x.png"/>
-				</div>
+		<div class="mui-row mui-text-center head">
+			<div class="mui-col-sm-8 mui-col-xs-12">
+				<img src="imgs/lgogo@2x.png" />
+			</div>
 		</div>
-		<div class="mui-row main mui-text-center" >
-				<div>
-					<form id='login-form' class="mui-col-sm-8">						
-						<div class="mui-input-row input">
-							<div class="input-left">
-								<div  class="input-left-main" >
-									<div class="input-logo-box">
-										<img src="imgs/icn_gc@2x.png"/>
-									</div>
-									<div  class="input-font">工厂</div>
-									<select id="factory">
-									<option value="1"  style="font-size: 28px;background: 0 0;border: hidden;">工厂</option>
+		<div class="mui-row main mui-text-center">
+			<div>
+				<form id='login-form' class="mui-col-sm-8">
+					<div class="mui-input-row input">
+						<div class="input-left">
+							<div class="input-left-main">
+								<div class="input-logo-box">
+									<img src="imgs/icn_gc@2x.png" />
+								</div>
+								<div class="input-font">工厂</div>
+								<select id="factory">
+									<option value="1" style="font-size: 28px;background: 0 0;border: hidden;">工厂</option>
 								</select>
-								</div>
 							</div>
 						</div>
-						<div class="mui-input-row input" >
-							<div class="input-left">
-								<div  class="input-left-main" >
-									<div class="input-logo-box">
-										<img src="imgs/icn_sj@2x.png"/>
-									</div>
-									<div class="input-font">账号</div>
+					</div>
+					<div class="mui-input-row input">
+						<div class="input-left">
+							<div class="input-left-main">
+								<div class="input-logo-box">
+									<img src="imgs/icn_sj@2x.png" />
 								</div>
-								<input id='account' type="text" class="mui-input-clear mui-input input-box" placeholder="" >
+								<div class="input-font">账号</div>
 							</div>
+							<input id='account' type="text" class="mui-input-clear mui-input input-box" placeholder="">
 						</div>
-						<div class=" input" style="background-image: url(imgs/kuan_srk@2x.png);">
-							<div class="input-left">
-								<div  class="input-left-main" >
-									<div class="input-logo-box">
-										<img src="imgs/icn_sj@2x.png"/>
-									</div>
-									<div  class="input-font">密码</div>
+					</div>
+					<div class=" input" style="background-image: url(imgs/kuan_srk@2x.png);">
+						<div class="input-left">
+							<div class="input-left-main">
+								<div class="input-logo-box">
+									<img src="imgs/icn_sj@2x.png" />
 								</div>
-								<input id='account' type="text" class="mui-input-clear mui-input input-box" placeholder="" >
+								<div class="input-font">密码</div>
 							</div>
+							<input id='account' type="text" class="mui-input-clear mui-input input-box" placeholder="">
 						</div>
-					</form>
-				</div>
-			</div>
-
-			<div class="mui-row mui-text-center margin-botton">
-				<div class="mui-col-sm-8 mui-col-xs-12">
-					<button id='login' class="mui-btn mui-btn-block mui-btn-primary button">登录</button>
-				</div>
-			</div>
-			<div class="mui-row mui-text-center">
-				<a class="add">联系客服</a>
+					</div>
+				</form>
 			</div>
 		</div>
-		
+
+		<div class="mui-row mui-text-center margin-botton">
+			<div class="mui-col-sm-8 mui-col-xs-12">
+				<button id='login' class="mui-btn mui-btn-block mui-btn-primary button">登录</button>
+			</div>
+		</div>
+		<div class="mui-row mui-text-center">
+			<a class="add">联系客服</a>
+		</div>
+		</div>
+
 	</body>
+	<script src="js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" charset="utf-8">
+		if(window.screen.width != 1536) {
+			var _scale = window.screen.width / 1536
+			$("meta").attr("content", "width=device-width, initial-scale=" + _scale + ",minimum-scale=" + _scale + ",maximum-scale=" + _scale + ",user-scalable=no")
+		}
+		document.getElementById('login').addEventListener('tap',function(){
+			location.href="main.html"
+		})
+	</script>
 
 </html>

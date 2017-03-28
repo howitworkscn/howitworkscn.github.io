@@ -126,16 +126,14 @@
 		</div>
 	</body>
 	<script src="js/mui.min.js"></script>
+	<script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
 	<script>
-		mui.init({
-			//swipeBack: true //启用右滑关闭功能
-		});
-		//		document.getElementById("about").addEventListener('tap', function() {
-		//			//获得主页面的webview
-		//			var main = plus.webview.currentWebview().parent();
-		//			//触发主页面的gohome事件
-		//			mui.fire(main, 'gohome');
-		//		});
+		if(window.screen.width != 1536)
+		{
+			var _scale = window.screen.width/1536
+			$("meta").attr("content","width=device-width, initial-scale="+_scale+",minimum-scale="+_scale+",maximum-scale="+_scale+",user-scalable=no")
+		}
+		mui.init();
 		document.getElementById("message").addEventListener('tap', function(e) {
 			//更换标题
 			//title.innerHTML = "消息列表";
