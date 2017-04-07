@@ -9,6 +9,7 @@
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
 
 		<link rel="stylesheet" href="css/mui.min.css">
+		<link rel="stylesheet" type="text/css" href="picker/dist/css/mui.picker.all.css" />
 		<style>
 			html,
 			body {
@@ -41,18 +42,25 @@
 				margin-left: 68px;
 			}
 			
-			.jczxbb {
+			#jczxbb {
 				position: absolute;
 				right: 68px;
 				top: 18px;
 				background-image: url(imgs/btn_jczxbb@2x.png);
 				width: 500px;
 				height: 64px;
+				font-family: "微软雅黑";
+				font-size: 24px;
+				color: #050505;
 				text-align: center;
+				background-color: transparent;
+				border: 0;
 			}
 			
-			#jczxbbSpan {
-				line-height: 64px;
+			#jczxbb:active {
+				border: 0;
+				background-color: transparent;
+				color: #ffffff;
 			}
 			
 			#tcdl {
@@ -66,11 +74,14 @@
 				left: 518px;
 				bottom: 126px;
 				text-align: center;
+				background-color: transparent;
+				border: 0;
 			}
 			
-			#tcdl>span {
-				line-height: 64px;
-				font-size: 30px;
+			#tcdl:active {
+				border: 0;
+				background-color: transparent;
+				color: #ffffff;
 			}
 			
 			.content {
@@ -105,47 +116,101 @@
 			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
 			<h1 class="mui-title">设置</h1>
 		</header>-->
-		<div id="updateVersion" class="update-version">
-			<span class="now-version">当前版本：V1.12.15</span>
-			<div id="jczxbb" class="jczxbb"><span id="jczxbbSpan">
+		<div id="mui-content">
+
+			<div id="updateVersion" class="update-version">
+				<span class="now-version">当前版本：V1.12.15</span>
+				<button id="jczxbb" class="mui-btn mui-btn-block mui-btn-primary button" onclick="selectNowVersion()">
 				检查是否最新版本，并更新
-			</span></div>
-		</div>
-		<div class="content">
-			<div id="message" class="content-div">
-				<span class="sf">消息列表</span>
-				<span class="mui-icon mui-icon-arrowright si"></span>
+			</button>
 			</div>
-			<div id="push" class="content-div">
-				<span class="sf">推送列表</span>
-				<span class="mui-icon mui-icon-arrowright si"></span>
+			<div class="content">
+				<div id="message" class="content-div">
+					<span class="sf">消息列表</span>
+					<span class="mui-icon mui-icon-arrowright si"></span>
+				</div>
+				<div id="push" class="content-div">
+					<span class="sf">推送列表</span>
+					<span class="mui-icon mui-icon-arrowright si"></span>
+				</div>
 			</div>
+
+			<button id="tcdl" class="mui-btn mui-btn-block mui-btn-primary button">
+				退出登录
+			</button>
 		</div>
-		<div id="tcdl">
-			<span>退出登录</span>
-		</div>
+
 	</body>
 	<script src="js/mui.min.js"></script>
 	<script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
-	<script>
-		if(window.screen.width != 1536)
-		{
-			var _scale = window.screen.width/1536
-			$("meta").attr("content","width=device-width, initial-scale="+_scale+",minimum-scale="+_scale+",maximum-scale="+_scale+",user-scalable=no")
+	<script src="picker/dist/js/mui.picker.all.js" type="text/javascript" charset="utf-8"></script>
+	<script src="public.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" charset="utf-8">
+		if(window.plus)
+			plusReady();
+		else
+			document.addEventListener("plusready", plusReady, false);
+		var selectNowVersion = function() {
+			mui.ajax(path + '/v1/factoryversions?access_token=' + access_token, {
+				async: false,
+				crossDomain: true,
+				type: 'get',
+				timeout: 30000,
+				dataType: 'json',
+				processData: false,
+				headers: { 'Content-Type': 'application/json' },
+				success: function(data) {
+					$(".now-version").html("当前版本：" + data)
+				},
+				error: function(xhr, type, errorThrown) {
+					//异常处理；
+					mui.toast('检查失败', { duration: 'long' })
+				}
+			});
 		}
-		mui.init();
-		document.getElementById("message").addEventListener('tap', function(e) {
-			//更换标题
-			//title.innerHTML = "消息列表";
-			//显示目标选项卡
-			location.href = "setup-message.html";
-		});
-		document.getElementById("push").addEventListener('tap',function(e) {
-			//更换标题
-			//title.innerHTML = "推送列表";
-			//显示目标选项卡
-location.href = "setup-push.html";
-		});
+		var userinfo, access_token
+
+		function plusReady() {
+			var self = plus.webview.currentWebview();
+			userinfo = self.userinfo
+			access_token = self.access_token
+			document.getElementById("message").addEventListener('tap', function(e) {
+				mui.openWindow({
+					url: 'setup-message.html',
+					id: 'setup-message.html',
+					styles: {
+						top: '0px', //新页面顶部位置
+						bottom: '49px', //新页面底部位置
+					},
+					extras: {
+						access_token: access_token,
+						userinfo: userinfo,
+					}
+				})
+			});
+			document.getElementById("push").addEventListener('tap', function(e) {
+				mui.openWindow({
+					url: 'setup-push.html',
+					id: 'setup-push.html',
+					styles: {
+						top: '0px', //新页面顶部位置
+						bottom: '49px', //新页面底部位置
+					},
+					extras: {
+						access_token: access_token,
+						userinfo: userinfo,
+					}
+				})
+			});
+			document.getElementById("tcdl").addEventListener('tap', function(e) {
+				var curr = plus.webview.currentWebview()
+				mui.closeOpened(curr)
+				mui.openWindow({
+					url: 'login.html',
+					id: 'login.html',
+				});
+			});
+		}
 	</script>
 
 </html>

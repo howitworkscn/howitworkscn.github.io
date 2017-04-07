@@ -32,6 +32,8 @@
 			}
 			
 			.timediv {
+				position: absolute;
+				top: 88px;
 				height: 110px;
 				width: 100%;
 				background-color: #FFFFFF;
@@ -61,7 +63,8 @@
 			}
 			
 			.content {
-				margin-top: 7px;
+				position: absolute;
+				top: 205px;
 				width: 100%;
 			}
 			
@@ -109,10 +112,10 @@
 	</head>
 
 	<body>
-		<!--<header class="mui-bar mui-bar-nav">
-			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
-			<h1 class="mui-title">设置</h1>
-		</header>-->
+		<header class="mui-bar mui-bar-nav" style="height: 88px;background-color: #FFC600;position: absolute;">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" style="font-size: 70px;"></a>
+			<h1 class="mui-title" style="font-size: 30px;line-height: 88px;color: #333;">推送列表</h1>
+		</header>
 		<div id="" class="timediv">
 			<span>时间:</span>
 			<img src="imgs/btn_sjw@2x.png" style="position: absolute; top: 44px;left: 350px;" />
@@ -151,7 +154,7 @@
 		<div id="xjts">
 			<span>新建推送</span>
 		</div>
-		<div style="width: 1012px; height: 810px; background-color: #FFFFFF; padding: 58px 0 0 26px; display: block" class="mui-popup mui-popup-in">
+		<div id="xjtsmodel" style="width: 1012px; height: 810px; background-color: #FFFFFF; padding: 58px 0 0 26px; display: none" class="mui-popup mui-popup-in">
 			<div style=" margin-bottom: 11px; overflow: hidden;">
 				<label style="font-size: 28px; color: #202020;height: 64px;line-height: 64px; float: left; width: 175px; text-align: center;">标题:</label>
 				<input type="text" name="" id="queryStepOrderNum" value="" style="width: 694px; height: 64px; border: 1px solid #bfbfbf; font-size: 28px; margin-left: 30px; float: left;" />
@@ -177,24 +180,17 @@
 				</div>
 			</div>
 			<div style="overflow: hidden; margin-top: 62px; text-align: center;">
-				<button style="background-image: url(imgs/btn_qr@2x.png); width: 250px; height: 64px;  line-height: 52px; text-align: center; margin: auto; font-size: 28px; color: #202020;  margin-right: 48px; border: 0px;">确定</button>
-				<button style="background-image: url(imgs/btn_qx2@2x.png); width: 250px; height: 64px;  line-height: 52px; text-align: center; margin: auto; font-size: 28px; color: #202020; border: 0px;">取消</button>
+				<button id='queren'  style="background-image: url(imgs/btn_qr@2x.png); width: 250px; height: 64px;  line-height: 52px; text-align: center; margin: auto; font-size: 28px; color: #202020;  margin-right: 48px; border: 0px;">确定</button>
+				<button id='quxiao' style="background-image: url(imgs/btn_qx2@2x.png); width: 250px; height: 64px;  line-height: 52px; text-align: center; margin: auto; font-size: 28px; color: #202020; border: 0px;">取消</button>
 			</div>
 		</div>
-		<div class="mui-popup-backdrop mui-active" style="display: block;"></div>
+		<div class="mui-popup-backdrop mui-active"id='zhezhao' style="display: none;"></div>
 	</body>
 	<script src="js/mui.min.js"></script>
 	<script src="js/jquery-2.1.0.js"></script>
 	<script src="picker/dist/js/mui.picker.all.js" type="text/javascript" charset="utf-8"></script>
+	<script src="public.js" type="text/javascript" charset="utf-8"></script>
 	<script type="text/javascript" charset="utf-8">
-		if(window.screen.width != 1536) {
-			var _scale = window.screen.width / 1536
-			$("meta").attr("content", "width=device-width, initial-scale=" + _scale + ",minimum-scale=" + _scale + ",maximum-scale=" + _scale + ",user-scalable=no")
-		}
-		mui.init()
-		var dtpicker = new mui.DtPicker({
-			type: "datetime", //设置日历初始视图模式 
-		})
 		document.getElementById('starttime').addEventListener('tap', function() {
 			dtpicker.show(
 				function(e) {
@@ -209,6 +205,31 @@
 				}
 			)
 		});
+		console.log(access_token)
+		$(".content").on('tap', function() {
+			mui.openWindow({
+				url: 'setup-push-info.html',
+				id: 'setup-push-info.html',
+				styles: {
+					top: '0px', //新页面顶部位置
+					bottom: '49px', //新页面底部位置
+				},
+				extras: {
+					mid: ''
+				}
+			})
+		})
+		document.getElementById('xjts').addEventListener('tap',function(){
+			$("#xjtsmodel").find("input,textarea").val("")
+			$("#xjtsmodel,#zhezhao").show()
+		})
+		document.getElementById('quxiao').addEventListener('tap',function(){
+			$("#xjtsmodel,#zhezhao").hide()
+			$("#xjtsmodel").find("input,textarea").val("")
+		})
+		document.getElementById("queren").addEventListener('tap',function(){
+			
+		})
 	</script>
 
 </html>

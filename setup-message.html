@@ -9,7 +9,7 @@
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
 
 		<link rel="stylesheet" href="css/mui.min.css">
-		<link rel="stylesheet" type="text/css" href="picker/dist/css/mui.picker.all.css"/>
+		<link rel="stylesheet" type="text/css" href="picker/dist/css/mui.picker.all.css" />
 		<style>
 			html,
 			body {
@@ -23,6 +23,8 @@
 			}
 			
 			.timediv {
+				position: absolute;
+				top: 88px;
 				height: 110px;
 				width: 100%;
 				background-color: #FFFFFF;
@@ -38,7 +40,8 @@
 			}
 			
 			.content {
-				margin-top: 7px;
+				position: absolute;
+				top: 205px;
 				width: 100%;
 			}
 			
@@ -68,25 +71,25 @@
 	</head>
 
 	<body>
-		<!--<header class="mui-bar mui-bar-nav">
-			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
-			<h1 class="mui-title">设置</h1>
-		</header>-->
+		<header class="mui-bar mui-bar-nav" style="height: 88px;background-color: #FFC600;position: absolute;">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" style="font-size: 70px;"></a>
+			<h1 class="mui-title" style="font-size: 30px;line-height: 88px;color: #333;">消息列表</h1>
+		</header>
 		<div id="" class="timediv">
 			<span>时间:</span>
 			<img src="imgs/btn_sjw@2x.png" style="position: absolute; top: 44px;left: 350px;" />
 			<img src="imgs/btn_sjw@2x.png" style="position: absolute; top: 44px;left: 648px;" />
-			<input style="width:220px;height: 60px;border: 1px solid #dbdbdb;margin-right: 14px;" id="starttime">
+			<input style="width:220px;height: 60px;border: 1px solid #dbdbdb;margin-right: 14px;" id="starttime" readonly="true">
 			<img src="imgs/heng.png" style="width: 30px;position: absolute;top:55px;" />
-			<input style="width:220px;height: 60px;border: 1px solid #dbdbdb;margin-left: 58px;" id="endtime">
-			<button id="timebtn" style="margin-top:31px;margin-left: 102px;font-family:'微软雅黑';font-size:24px;width: 104px;height: 48px;background-color: #FFC600;color: #222222;border-radius: 6px;border-width: 0px;">确定</button>
+			<input style="width:220px;height: 60px;border: 1px solid #dbdbdb;margin-left: 58px;" id="endtime" readonly="true">
+			<button id="timebtn" onclick="query()" style="margin-top:31px;margin-left: 102px;font-family:'微软雅黑';font-size:24px;width: 104px;height: 48px;background-color: #FFC600;color: #222222;border-radius: 6px;border-width: 0px;">确定</button>
 		</div>
 		<div class="content">
-			<div id="message" class="content-div">
+			<div class="content-div">
 				<span class="sf">这里显示标题</span>
 				<span class="si">2016.10.20 09: 00</span>
 			</div>
-			<div id="push" class="content-div">
+			<div class="content-div">
 				<span class="sf">这里显示标题</span>
 				<span class="si">2016.10.20 09: 00</span>
 			</div>
@@ -95,32 +98,66 @@
 	<script src="js/mui.min.js"></script>
 	<script src="js/jquery-2.1.0.js"></script>
 	<script src="picker/dist/js/mui.picker.all.js" type="text/javascript" charset="utf-8"></script>
+	<script src="public.js" type="text/javascript" charset="utf-8"></script>
 	<script>
-		mui.init();
-		if(window.screen.width != 1536)
-		{
-			var _scale = window.screen.width/1536
-			$("meta").attr("content","width=device-width, initial-scale="+_scale+",minimum-scale="+_scale+",maximum-scale="+_scale+",user-scalable=no")
-		}
-			
-		var dtpicker = new mui.DtPicker({
-			type: "datetime", //设置日历初始视图模式 
-		})
+		if(window.plus)
+			plusReady();
+		else
+			document.addEventListener("plusready", plusReady, false);
 		document.getElementById('starttime').addEventListener('tap', function() {
 			dtpicker.show(
-				function (e){
+				function(e) {
 					$("#starttime").val(e.value)
 				}
 			)
 		});
 		document.getElementById('endtime').addEventListener('tap', function() {
 			dtpicker.show(
-				function (e){
+				function(e) {
 					$("#endtime").val(e.value)
 				}
 			)
 		});
-		
+		$(".content").on('tap', function() {
+			mui.openWindow({
+				url: 'setup-message-info.html',
+				id: 'setup-message-info.html',
+				styles: {
+					top: '0px', //新页面顶部位置
+					bottom: '49px', //新页面底部位置
+				},
+				extras: {
+					access_token: access_token,
+					userinfo: userinfo,
+				}
+			})
+		})
+		var userinfo, access_token
+
+		function query() {
+			mui.ajax(path + '/v1/factoryversions?access_token=' + access_token, {
+				async: false,
+				crossDomain: true,
+				type: 'get',
+				timeout: 30000,
+				dataType: 'json',
+				processData: false,
+				headers: { 'Content-Type': 'application/json' },
+				success: function(data) {
+					$(".now-version").html("当前版本：" + data)
+				},
+				error: function(xhr, type, errorThrown) {
+					//异常处理；
+					mui.toast('检查失败', { duration: 'long' })
+				}
+			});
+		}
+
+		function plusReady() {
+			var self = plus.webview.currentWebview();
+			userinfo = self.userinfo
+			access_token = self.access_token
+		}
 	</script>
 
 </html>

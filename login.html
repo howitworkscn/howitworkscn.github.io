@@ -237,6 +237,11 @@
 				width: 500px;
 				margin: auto;
 			}
+			
+			#login:active {
+				border: 0px;
+				background-color: transparent;
+			}
 		</style>
 
 	</head>
@@ -274,7 +279,7 @@
 								</div>
 								<div class="input-font">账号</div>
 							</div>
-							<input id='account' type="text" class="mui-input-clear mui-input input-box" placeholder="">
+							<input id='username' value="f_admin" class="mui-input-clear mui-input input-box" placeholder="">
 						</div>
 					</div>
 					<div class=" input" style="background-image: url(imgs/kuan_srk@2x.png);">
@@ -285,7 +290,7 @@
 								</div>
 								<div class="input-font">密码</div>
 							</div>
-							<input id='account' type="text" class="mui-input-clear mui-input input-box" placeholder="">
+							<input id='password' type="password" value="admin" class="mui-input-clear mui-input input-box" placeholder="">
 						</div>
 					</div>
 				</form>
@@ -300,19 +305,83 @@
 		<div class="mui-row mui-text-center">
 			<a class="add">联系客服</a>
 		</div>
-		</div>
-
 	</body>
 	<script src="js/mui.min.js" type="text/javascript" charset="utf-8"></script>
 	<script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+	<script src="public.js" type="text/javascript" charset="utf-8"></script>
 	<script type="text/javascript" charset="utf-8">
-		if(window.screen.width != 1536) {
-			var _scale = window.screen.width / 1536
-			$("meta").attr("content", "width=device-width, initial-scale=" + _scale + ",minimum-scale=" + _scale + ",maximum-scale=" + _scale + ",user-scalable=no")
+		if(window.plus)
+			plusReady();
+		else
+			document.addEventListener("plusready", plusReady, false);
+		var $username = $("#username"),
+			$password = $("#password")
+		var getToken = function(callback) {
+			mui.ajax('http://user-client:somesecret@jdxb.torinosrc.com/oauth/token', {
+				async: false,
+				data: {
+					grant_type: 'password',
+					username: $username.val(),
+					password: $password.val()
+				},
+				crossDomain: true,
+				type: 'post',
+				timeout: 30000,
+				dataType: 'json',
+				processData: true,
+				success: function(data) {
+					accessToken = data.access_token
+					callback(data.access_token)
+				},
+				error: function(xhr, type, errorThrown) {
+					//异常处理；
+					mui.toast('登录失败,请检查用户名密码！！！', { duration: 'long' })
+				}
+			});
 		}
-		document.getElementById('login').addEventListener('tap',function(){
-			location.href="main.html"
-		})
+		var toLogin = function(accessToken) {
+			mui.ajax(path + '/v1/factory/users/verify?access_token=' + accessToken, {
+				async: false,
+				data: {
+					"account": $username.val(),
+					"password": $password.val()
+				},
+				crossDomain: true,
+				type: 'post',
+				timeout: 30000,
+				dataType: 'json',
+				//				processData:false,
+				headers: { 'Content-Type': 'application/json' },
+				success: function(data, type) {
+					if(data.messageCode == 200) {
+						mui.openWindow({
+							url: 'main.html',
+							id: 'main.html',
+							extras: {
+								access_token: accessToken,
+								userinfo: data
+							}
+						});
+					} else
+						mui.toast('登录失败,请检查用户名密码！！！', { duration: 'short' })
+				},
+				error: function(xhr, type, errorThrown) {
+					//异常处理；
+					mui.toast('登录失败,请检查用户名密码！！！', { duration: 'short' })
+				}
+			});
+		}
+
+		function plusReady() {
+			document.getElementById('login').addEventListener('tap', function() {
+				if($.trim($username.val()) == "")
+					mui.toast('用户名不能为空！！！', { duration: 'short' })
+				else if($.trim($password.val()) == "")
+					mui.toast('密码不能为空！！！', { duration: 'short' })
+				else
+					getToken(toLogin);
+			})
+		}
 	</script>
 
 </html>

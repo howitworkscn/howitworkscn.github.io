@@ -13,7 +13,6 @@
 		<style>
 			html,
 			body {
-				
 				background-color: #f8f8f8;
 			}
 			
@@ -70,19 +69,19 @@
 	<body>
 		<div class="small-nav-box">
 			<div id="segmentedControl" class="mui-segmented-control mui-segmented-control-inverted mFont">
-				<a class="small-nav mui-control-item mui-active mFont " href="#item1">
+				<a class="small-nav mui-control-item mui-active mFont " id="status0">
 					<div class="ma-div">全部</div>
 				</a>
-				<a class="small-nav mui-control-item mFont" href="#item2">
+				<a class="small-nav mui-control-item mFont" id="status2">
 					<div class="ma-div">待取件</div>
 				</a>
-				<a class="small-nav mui-control-item mFont" href="#item3">
+				<a class="small-nav mui-control-item mFont" id="status3">
 					<div class="ma-div">处理中</div>
 				</a>
-				<a class="small-nav mui-control-item mFont" href="#item4">
+				<a class="small-nav mui-control-item mFont" id="status4">
 					<div class="ma-div">待收件</div>
 				</a>
-				<a class="small-nav mui-control-item mFont" href="#item5">
+				<a class="small-nav mui-control-item mFont" id="status6">
 					<div class="ma-div">取单</div>
 				</a>
 			</div>
@@ -90,13 +89,13 @@
 		<div class="seach-box">
 			<div class="mui-row" style="margin-left: 14px;">
 				<div style="float: left; margin-left: 50px; margin-top: 33px;">
-					<label style="font-size: 24px; color: #222222;height: 64px;line-height: 64px;">订单编号:</label><input type="text" name="" id="queryStepOrderNum" value="" style="width: 230px; height: 64px; font-size: 24px; margin-left: 24px;" />
+					<label style="font-size: 24px; color: #222222;height: 64px;line-height: 64px;">订单编号:</label><input type="text" name="" id="id" value="" style="width: 230px; height: 64px; font-size: 24px; margin-left: 24px;" />
 				</div>
 				<div style="float: left; margin-left: 50px; margin-top: 33px;">
-					<label style="font-size: 24px; color: #222222;height: 64px;line-height: 64px;">客人名称:</label><input type="text" name="" id="queryStepOrderNum" value="" style="width: 230px; height: 64px; font-size: 24px; margin-left: 24px;" />
+					<label style="font-size: 24px; color: #222222;height: 64px;line-height: 64px;">客人名称:</label><input type="text" name="" id="buyOrderName" value="" style="width: 230px; height: 64px; font-size: 24px; margin-left: 24px;" />
 				</div>
 				<div style="float: left; margin-left: 50px; margin-top: 33px;">
-					<label style="font-size: 24px; color: #222222;height: 64px;line-height: 64px;">标识牌号码:</label><input type="text" name="" id="queryStepOrderNum" value="" style="width: 230px; height: 64px; font-size: 24px; margin-left: 24px;" />
+					<label style="font-size: 24px; color: #222222;height: 64px;line-height: 64px;">标识牌号码:</label><input type="text" name="" id="signageId" value="" style="width: 230px; height: 64px; font-size: 24px; margin-left: 24px;" />
 				</div>
 				<div style="float: right; margin-top: 40px; margin-right: 74px;"><img src="imgs/icn_ewm@2x.png"></div>
 			</div>
@@ -119,7 +118,7 @@
 					<span style="height: 64px; line-height: 64px; width: 30px; margin-top: -5px;"><img src="imgs/heng.png"></span>
 					<input style="width:230px;height: 64px;border: 1px solid #dbdbdb;margin-left: 14px;" id="endtime">
 				</div>
-				<div style="float: right; margin-top: 25px; margin-right: 50px;"><button type="button" class="mui-btn mui-btn-warning" style="background-color: #FFC600; font-size: 24px; color: #222222; height: 48px; width: 104px;">查询</button></div>
+				<div style="float: right; margin-top: 25px; margin-right: 50px;"><button type="button" onclick="queryBtn()" class="mui-btn mui-btn-warning" style="background-color: #FFC600; font-size: 24px; color: #222222; height: 48px; width: 104px;">查询</button></div>
 			</div>
 		</div>
 		<div style="margin-top: 32px; background-color: #FFFFFF;">
@@ -135,16 +134,16 @@
 					</tr>
 				</thead>
 				<tbody>
-					<tr style="height: 80px; border-top: 1px #EEEEEE solid;">
+					<!--<tr style="height: 80px; border-top: 1px #EEEEEE solid;">
 						<td style="width: 216px; text-align: center;">4234552</td>
 						<td style="width: 160px; text-align: center;">陈某某</td>
 						<td style="width: 226px; text-align: center;">12</td>
 						<td style="width: 132px; text-align: center;">待取件</td>
 						<td style="width: 208px; text-align: center;">无</td>
 						<td style="width: 594px; text-align: center; padding-bottom: 16px;">
-							<button type="button" class="mui-btn mui-btn-warning" style="background-color: #FFC600; font-size: 24px; color: #222222; height: 48px; width: 80px; margin-top: 16px;">详情</button>
+							<button type="button" class="mui-btn mui-btn-warning" onclick="details(this)" style="background-color: #FFC600; font-size: 24px; color: #222222; height: 48px; width: 80px; margin-top: 16px;">详情</button>
 							<button type="button" class="mui-btn mui-btn-warning" style="background-color: #FFC600; font-size: 24px; color: #222222; height: 48px; width: 280px; margin-left: 12px; margin-top: 16px;">确认到厂、拆分工序</button>
-							<button type="button" class="mui-btn mui-btn-warning" style="background-color: #FFC600; font-size: 24px; color: #222222; height: 48px; width: 80px; margin-left: 12px; margin-top: 16px;">返单</button>
+							<button type="button" class="mui-btn mui-btn-warning " onclick="" style="background-color: #FFC600; font-size: 24px; color: #222222; height: 48px; width: 80px; margin-left: 12px; margin-top: 16px;">返单</button>
 						</td>
 					</tr>
 					<tr style="height: 80px; border-top: 1px #EEEEEE solid; background-color: #EEEEEE;">
@@ -156,7 +155,7 @@
 						<td style="width: 594px; padding-bottom: 16px;" align="center">
 							<button type="button" class="mui-btn mui-btn-warning" style="background-color: #FFC600; font-size: 24px; color: #222222; height: 48px; width: 80px; margin-top: 16px;">详情</button>
 							<button type="button" class="mui-btn mui-btn-warning" style="background-color: #FFC600; font-size: 24px; color: #222222; height: 48px; width: 148px; margin-left: 12px; margin-top: 16px;">查看工序</button>
-							<button type="button" class="mui-btn mui-btn-warning" style="background-color: #FFC600; font-size: 24px; color: #222222; height: 48px; width: 182px; margin-left: 12px; margin-top: 16px;">确认发货出厂</button>
+
 						</td>
 					</tr>
 					<tr style="height: 80px; border-top: 1px #EEEEEE solid;">
@@ -177,8 +176,8 @@
 						<td style="width: 132px; text-align: center;">门店已收件</td>
 						<td style="width: 208px; text-align: center;">准备发货</td>
 						<td style="width: 594px; padding-bottom: 16px;" align="center">
-							<button type="button" class="mui-btn mui-btn-warning" style="background-color: #FFC600; font-size: 24px; color: #222222; height: 48px; width: 80px; margin-top: 16px;">详情</button>
-							<button type="button" class="mui-btn mui-btn-warning" style="background-color: #FFC600; font-size: 24px; color: #222222; height: 48px; width: 148px; margin-left: 12px; margin-top: 16px;">查看工序</button>
+							<button type="button" class="mui-btn mui-btn-warning " style="background-color: #FFC600; font-size: 24px; color: #222222; height: 48px; width: 80px; margin-top: 16px;">详情</button>
+
 						</td>
 					</tr>
 					<tr style="height: 80px; border-top: 1px #EEEEEE solid;">
@@ -188,7 +187,7 @@
 						<td style="width: 132px; text-align: center;">客人已收件</td>
 						<td style="width: 208px; text-align: center;">已发货</td>
 						<td style="width: 594px; text-align: center; padding-bottom: 16px;">
-							<button type="button" class="mui-btn mui-btn-warning" style="background-color: #FFC600; font-size: 24px; color: #222222; height: 48px; width: 80px; margin-top: 16px;">详情</button>
+							<button type="button" class="mui-btn mui-btn-warning " style="background-color: #FFC600; font-size: 24px; color: #222222; height: 48px; width: 80px; margin-top: 16px;">详情</button>
 							<button type="button" class="mui-btn mui-btn-warning" style="background-color: #FFC600; font-size: 24px; color: #222222; height: 48px; width: 148px; margin-left: 12px; margin-top: 16px;">查看工序</button>
 						</td>
 					</tr>
@@ -199,31 +198,31 @@
 						<td style="width: 132px; text-align: center;">返单</td>
 						<td style="width: 208px; text-align: center;">无</td>
 						<td style="width: 594px; padding-bottom: 16px;" align="center">
-							<button type="button" class="mui-btn mui-btn-warning" style="background-color: #FFC600; font-size: 24px; color: #222222; height: 48px; width: 80px; margin-top: 16px;">详情</button>
-							<button type="button" class="mui-btn mui-btn-warning" style="background-color: #FFC600; font-size: 24px; color: #222222; height: 48px; width: 188px; margin-left: 12px; margin-top: 16px;">查看返单原因</button>
+							<button type="button" class="mui-btn mui-btn-warning " style="background-color: #FFC600; font-size: 24px; color: #222222; height: 48px; width: 80px; margin-top: 16px;">详情</button>
+
 						</td>
-					</tr>
+					</tr>-->
 				</tbody>
 			</table>
 		</div>
-		<div style="width: 776px; height: 520px; background-color: #FFFFFF; padding: 32px 38px 36px 42px; display: none;" class="mui-popup mui-popup-in">
+		<div id="fandanmodel" style="width: 776px; height: 520px; background-color: #FFFFFF; padding: 32px 38px 36px 42px; display: none;" class="mui-popup mui-popup-in">
 			<div style=" font-size: 28px; color:#202020; text-align: left; line-height: 28px;">
 				返单原因
 			</div>
 			<div style="margin-top: 24px;">
-				<textarea  style="width: 700px; height: 298px; border: 1px solid #b5b5b5; font-size: 28px; line-height: 28px; color: #a1a1a1; text-align: left; vertical-align: top; padding: 32px 30px;" id="textarea" onfocus="if(value=='请输入返单原因'){value=''}"  onblur="if (value ==''){value='请输入返单原因'}">请输入返单原因</textarea>  
+				<textarea style="width: 700px; height: 298px; border: 1px solid #b5b5b5; font-size: 28px; line-height: 28px; color: #a1a1a1; text-align: left; vertical-align: top; padding: 32px 30px;" id="fandantext" onfocus="if(value=='请输入返单原因'){value=''}" onblur="if (value ==''){value='请输入返单原因'}">请输入返单原因</textarea>
 			</div>
 			<div style="overflow: hidden; margin-top: 24px;">
-				<div style="background-image: url(imgs/btn_qx2@2x.png); width: 250px; height: 64px;  line-height: 64px; text-align: center; margin: auto; font-size: 28px; color: #202020; float: right;">取消</div>
-				<div style="background-image: url(imgs/btn_qr@2x.png); width: 250px; height: 64px;  line-height: 64px; text-align: center; margin: auto; font-size: 28px; color: #202020; float: right; margin-right: 48px;">确定</div>
-				
+				<div onclick="closeFun(this)" style="background-image: url(imgs/btn_qx2@2x.png); width: 250px; height: 64px;  line-height: 64px; text-align: center; margin: auto; font-size: 28px; color: #202020; float: right;">取消</div>
+				<div onclick="fandan()" style="background-image: url(imgs/btn_qr@2x.png); width: 250px; height: 64px;  line-height: 64px; text-align: center; margin: auto; font-size: 28px; color: #202020; float: right; margin-right: 48px;">确定</div>
+
 			</div>
 		</div>
-		<div style="width: 776px; height: 466px; background-color: #FFFFFF; padding-top: 62px; padding-left: 73px; display:  block;" class="mui-popup mui-popup-in">
+		<div id="wuliumodel" style="width: 776px; height: 466px; background-color: #FFFFFF; padding-top: 62px; padding-left: 73px; display:  none;" class="mui-popup mui-popup-in">
 			<div style=" margin-bottom: 26px; width: 776px; overflow: hidden;">
 				<label style="font-size: 28px; color: #202020;height: 64px;line-height: 64px; float: left;">物流类型:</label>
 				<div style="width: 478px; height: 64px; font-size: 28px; margin-left: 30px; border: 1px solid #bfbfbf; float: left;">
-					<input type="text" name="" id="queryStepOrderNum" value=""  style="width: 410px; height: 62px; font-size: 28px;  border: 0px;" />
+					<input type="text" name="" id="queryStepOrderNum" value="" style="width: 410px; height: 62px; font-size: 28px;  border: 0px;" />
 					<a style="height: 62px; line-height: 62px;"><img src="imgs/btn_sjw@2x.png" style="position: relative; left: auto; top:5px;" /></a>
 				</div>
 			</div>
@@ -232,46 +231,212 @@
 				<input type="text" name="" id="queryStepOrderNum" value="" style="width: 478px; height: 64px; border: 1px solid #bfbfbf; font-size: 28px; margin-left: 30px; float: left;" />
 			</div>
 			<div style=" margin-bottom: 11px; overflow: hidden;">
-				<label style="font-size: 28px; color: #202020;height: 64px;line-height: 64px; float: left;"">快递备注:</label>
-				<input type="text" name="" id="queryStepOrderNum" value="" style="width: 478px; height: 64px; border: 1px solid #bfbfbf; font-size: 28px; margin-left: 30px; float: left;"" />
+				<label style="font-size: 28px; color: #202020;height: 64px;line-height: 64px; float: left;" ">快递备注:</label>
+				<input type="text " name=" " id="queryStepOrderNum " value=" " style="width: 478px; height: 64px; border: 1px solid #bfbfbf; font-size: 28px; margin-left: 30px; float: left; "" />
 			</div>
 			<div style="overflow: hidden; margin-top: 46px;">
-				<div style="background-image: url(imgs/btn_qx2@2x.png); width: 250px; height: 64px;  line-height: 64px; text-align: center; margin: auto; font-size: 28px; color: #202020; float: right; margin-right: 42px;">取消</div>
-				<div style="background-image: url(imgs/btn_qr@2x.png); width: 250px; height: 64px;  line-height: 64px; text-align: center; margin: auto; font-size: 28px; color: #202020; float: right; margin-right: 48px;">确定</div>
-				
+				<div onclick="closeFun(this)" style="background-image: url(imgs/btn_qx2@2x.png); width: 250px; height: 64px;  line-height: 64px; text-align: center; margin: auto; font-size: 28px; color: #202020; float: right; margin-right: 42px;">取消</div>
+				<div onclick="wuliu()" style="background-image: url(imgs/btn_qr@2x.png); width: 250px; height: 64px;  line-height: 64px; text-align: center; margin: auto; font-size: 28px; color: #202020; float: right; margin-right: 48px;">确定</div>
+
 			</div>
 		</div>
-		<div class="mui-popup-backdrop mui-active" style="display: block;"></div>
+		<div class="mui-popup-backdrop mui-active" id="zhezhao" style="display: none;"></div>
 	</body>
 	<script src="js/mui.min.js"></script>
 	<script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
 	<script src="picker/dist/js/mui.picker.all.js" type="text/javascript" charset="utf-8"></script>
+	<script src="public.js" type="text/javascript" charset="utf-8"></script>
 	<script>
-		
-		if(window.screen.width != 1536)
-		{
-			var _scale = window.screen.width/1536
-			$("meta").attr("content","width=device-width, initial-scale="+_scale+",minimum-scale="+_scale+",maximum-scale="+_scale+",user-scalable=no")
+		if(window.plus)
+			plusReady();
+		else
+			document.addEventListener("plusready", plusReady, false);
+
+		var userinfo, access_token
+		var btn2 = '	<button type="button" class="mui-btn mui-btn-warning" style="background-color: #FFC600; font-size: 24px; color: #222222; height: 48px; width: 280px; margin-left: 12px; margin-top: 16px;">确认到厂、拆分工序</button>',
+			btn3 = '	<button type="button" class="mui-btn mui-btn-warning " onclick="backOrder(this)" style="background-color: #FFC600; font-size: 24px; color: #222222; height: 48px; width: 80px; margin-left: 12px; margin-top: 16px;">返单</button>',
+			btn4 = '<button type="button" class="mui-btn mui-btn-warning" style="background-color: #FFC600; font-size: 24px; color: #222222; height: 48px; width: 188px; margin-left: 12px; margin-top: 16px;">查看返单原因</button>',
+			btn5 = '<button type="button" class="mui-btn mui-btn-warning" style="background-color: #FFC600; font-size: 24px; color: #222222; height: 48px; width: 148px; margin-left: 12px; margin-top: 16px;">查看工序</button>',
+			btn6 = '<button type="button" class="mui-btn mui-btn-warning " onclick="putGoods(this)" style="background-color: #FFC600; font-size: 24px; color: #222222; height: 48px; width: 182px; margin-left: 12px; margin-top: 16px;">确认发货出厂</button>'
+
+		function queryBtn() {
+			var status_;
+			$("#segmentedControl a").each(function() {
+				if($(this).is(".mui-active"))
+					status_ = $(this).attr("id").replace("status")
+			})
+			mui.ajax(path + '/v1/serviceorders?access_token=' + access_token, {
+				async: false,
+				data: {
+					id: $("#id").val(),
+					buyOrderName: $("#buyOrderName").val(),
+					signageId: $("#signageId").val(),
+					createTimeFrom: $("#starttime").val(),
+					createTimeTo: $("#endtime").val(),
+					status: status_
+				},
+				crossDomain: true,
+				type: 'get',
+				timeout: 30000,
+				dataType: 'json',
+				//				processData:false,
+				headers: { 'Content-Type': 'application/json' },
+				success: function(data, type) {
+					var result = data.list
+					var html = "",
+						fontColor
+					for(var i = 0; i < result.length; i++) {
+						if(result[i] == "")
+							fontColor = ""
+						else
+							fontColor = "color:#77dc6f;"
+						html += '<tr style="height: 80px; border-top: 1px #EEEEEE solid;' + fontColor + '">' +
+							'<td style="width: 216px; text-align: center;">' + result[i].id + '</td>' +
+							'<td style="width: 160px; text-align: center;">' + result[i].buyOrderName + '</td>' +
+							'<td style="width: 226px; text-align: center;">' + result[i].buyOrderAccount + '</td>' +
+							'<td style="width: 132px; text-align: center;">' + getStatus(result[i].status) + '</td>' +
+							'<td style="width: 208px; text-align: center;">' + result[i].id + '</td>' +
+							'<td style="width: 594px; text-align: center; padding-bottom: 16px;">' +
+							'<button type="button" class="mui-btn mui-btn-warning" onclick="details(this)" orderid="' + result[i].id + '" style="background-color: #FFC600; font-size: 24px; color: #222222; height: 48px; width: 80px; margin-top: 16px;">详情</button>' +
+
+							'</td>'
+					}
+					$("tbody").html(html)
+				},
+				error: function(xhr, type, errorThrown) {
+					//异常处理；
+					mui.toast('查询失败请联系管理员！！！', { duration: 'short' })
+				}
+			});
+
 		}
-		mui.init();
-		var dtpicker = new mui.DtPicker({
-			type: "datetime", //设置日历初始视图模式 
-		})
-		document.getElementById('starttime').addEventListener('tap', function() {
-			dtpicker.show(
-				function(e) {
-					$("#starttime").val(e.value)
+
+		function getStatus(_status) {
+			switch(_status) {
+				case 1:
+					return "待付款";
+				case 2:
+					return "待取件";
+				case 3:
+					return "处理中";
+				case 4:
+					return "待收件";
+				case 5:
+					return "待评价";
+				case 6:
+					return "已完成";
+				case 7:
+					return "已取消";
+				case 8:
+					return "退款/取消申请中";
+				case 9:
+					return "客服审核--同意";
+				case 10:
+					return "退款/取消成功";
+				case 11:
+					return "退款/取消失败";
+				case 12:
+					return "门店已收件";
+				default:
+					return "无状态";
+			}
+
+		}
+
+		function putGoods(e) {
+			getWuliuType()
+			$("#wuliumodel,#zhezhao").show()
+		}
+
+		function getWuliuType() {
+			mui.ajax(path + '/v1/expresss?access_token=' + access_token, {
+				async: false,
+				crossDomain: true,
+				type: 'get',
+				timeout: 30000,
+				dataType: 'json',
+				//				processData:false,
+				headers: { 'Content-Type': 'application/json' },
+				success: function(data, type) {
+
+				},
+				error: function(xhr, type, errorThrown) {
+					//异常处理；
+					mui.toast('查询失败请联系管理员！！！', { duration: 'short' })
 				}
-			)
-		});
-		document.getElementById('endtime').addEventListener('tap', function() {
-			dtpicker.show(
-				function(e) {
-					$("#endtime").val(e.value)
+			});
+		}
+
+		function backOrder(e) {
+			$("#fandanmodel,#zhezhao").show()
+
+		}
+
+		function closeFun(e) {
+			$(e).parent().parent().hide()
+			$("#zhezhao").hide()
+			$(e).parent().parent().find("input,textarea").val("")
+		}
+
+		function fandan() {
+
+		}
+
+		function wuliu() {
+			mui.ajax(path + '/v1/serviceorders/'+id+'/status/'+status+'?access_token=' + access_token, {
+				async: false,
+				crossDomain: true,
+				type: 'put',
+				timeout: 30000,
+				dataType: 'json',
+				//				processData:false,
+				headers: { 'Content-Type': 'application/json' },
+				success: function(data, type) {
+
+				},
+				error: function(xhr, type, errorThrown) {
+					//异常处理；
+					mui.toast('查询失败请联系管理员！！！', { duration: 'short' })
 				}
-			)
-		});
-		
+			});
+		}
+
+		function details(e) {
+			mui.openWindow({
+				url: 'order-details.html',
+				id: 'order-details.html',
+				styles: {
+					top: '0px', //新页面顶部位置
+					bottom: '49px', //新页面底部位置
+				},
+				extras: {
+					access_token: access_token,
+					userinfo: userinfo,
+					orderid: $(e).attr("orderid")
+				}
+			})
+		}
+
+		function plusReady() {
+			var self = plus.webview.currentWebview();
+			userinfo = self.userinfo
+			access_token = self.access_token
+
+			document.getElementById('starttime').addEventListener('tap', function() {
+				dtpicker.show(
+					function(e) {
+						$("#starttime").val(e.value)
+					}
+				)
+			});
+			document.getElementById('endtime').addEventListener('tap', function() {
+				dtpicker.show(
+					function(e) {
+						$("#endtime").val(e.value)
+					}
+				)
+			});
+		}
 	</script>
 
 </html>

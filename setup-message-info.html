@@ -10,10 +10,12 @@
 
 		<link rel="stylesheet" href="css/mui.min.css">
 		<style>
-			html,body {
+			html,
+			body {
 				background-color: #efeff4;
 			}
-			.title{
+			
+			.title {
 				margin: 20px 15px 10px;
 				color: #6d6d72;
 				font-size: 15px;
@@ -22,12 +24,13 @@
 	</head>
 
 	<body>
-		<!--<header class="mui-bar mui-bar-nav">
-			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
-			<h1 class="mui-title">设置</h1>
-		</header>-->
-		<div style="background-color: #FFFFFF;  padding-top: 54px; height: 1470px;">
-			<div style="font-size: 32px; color: #050505; height: 32px; line-height: 32px; text-align: center; margin-top: 54px;">这里显示标题</div>
+		<header class="mui-bar mui-bar-nav" style="height: 88px;background-color: #FFC600;position: absolute;">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" style="font-size: 70px;"></a>
+			<h1 class="mui-title" style="font-size: 30px;line-height: 88px;color: #333;">消息详情</h1>
+		</header>
+
+		<div style="background-color: #FFFFFF; margin-top: 88px; padding-top: 54px; height: 1470px;">
+			<div style="font-size: 32px; color: #050505; height: 32px; line-height: 32px; text-align: center; margin-top: 0px;">这里显示标题</div>
 			<div style="font-size: 26px; color: #767676; height: 26px; line-height: 26px; text-align: right; margin-top: 28px; padding-right: 68px;">2016.10.20 09: 00</div>
 			<div style="padding: 0 73px 0 55px; font-size: 32px; color: #050505; line-height: 52px; text-indent:2em; margin-top: 20px;">
 				消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容息内容消息内容息内容消息内容息内容消息内容息内容消息内容息内容消息内容息内容消息内容息内容消息内容息内容消息内容
@@ -36,12 +39,8 @@
 	</body>
 	<script src="js/mui.min.js"></script>
 	<script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
-		<script type="text/javascript" charset="utf-8"> 
-		if(window.screen.width != 1536)
-		{
-			var _scale = window.screen.width/1536
-			$("meta").attr("content","width=device-width, initial-scale="+_scale+",minimum-scale="+_scale+",maximum-scale="+_scale+",user-scalable=no")
-		}
-		mui.init();
+	<script src="public.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" charset="utf-8">
+
 	</script>
 </html>
