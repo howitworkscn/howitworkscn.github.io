@@ -92,13 +92,13 @@
 
 <meta name="description" content="没啥好分享，就记录下自己成长的点滴">
 <meta property="og:type" content="website">
-<meta property="og:title" content="TeraTimes成长记">
+<meta property="og:title" content="分类">
 <meta property="og:url" content="//www.howitworks.cn/categories/index.html">
 <meta property="og:site_name" content="TeraTimes成长记">
 <meta property="og:description" content="没啥好分享，就记录下自己成长的点滴">
-<meta property="og:updated_time" content="2017-06-06T02:49:31.702Z">
+<meta property="og:updated_time" content="2017-08-29T05:53:15.750Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="TeraTimes成长记">
+<meta name="twitter:title" content="分类">
 <meta name="twitter:description" content="没啥好分享，就记录下自己成长的点滴">
 
 
@@ -211,6 +211,14 @@
     <ul id="menu" class="menu">
       
         
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+            首页
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-categories">
           <a href="/categories" rel="section">
             
@@ -284,7 +292,7 @@
   <div id="posts" class="posts-expand">
   <header class="post-header">
 
-	<h2 class="post-title" itemprop="name headline"></h2>
+	<h2 class="post-title" itemprop="name headline">分类</h2>
 
 
 
@@ -294,10 +302,10 @@
     
       <div class="category-all-page">
         <div class="category-all-title">
-            暂无分类
+            目前共计 2 个分类
         </div>
         <div class="category-all">
-          
+          <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/产品思考/">产品思考</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/学习成长/">学习成长</a><span class="category-list-count">1</span></li></ul>
         </div>
       </div>
     
@@ -519,113 +527,6 @@
 
 
   
-
-  
-  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
-  <script>AV.initialize("0u8Q7V94qtEC5xkk1nAYGr2q-gzGzoHsz", "wPQQeq6BPVwScSXMsAifrvnn");</script>
-  <script>
-    function showTime(Counter) {
-      var query = new AV.Query(Counter);
-      var entries = [];
-      var $visitors = $(".leancloud_visitors");
-
-      $visitors.each(function () {
-        entries.push( $(this).attr("id").trim() );
-      });
-
-      query.containedIn('url', entries);
-      query.find()
-        .done(function (results) {
-          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
-
-          if (results.length === 0) {
-            $visitors.find(COUNT_CONTAINER_REF).text(0);
-            return;
-          }
-
-          for (var i = 0; i < results.length; i++) {
-            var item = results[i];
-            var url = item.get('url');
-            var time = item.get('time');
-            var element = document.getElementById(url);
-
-            $(element).find(COUNT_CONTAINER_REF).text(time);
-          }
-          for(var i = 0; i < entries.length; i++) {
-            var url = entries[i];
-            var element = document.getElementById(url);
-            var countSpan = $(element).find(COUNT_CONTAINER_REF);
-            if( countSpan.text() == '') {
-              countSpan.text(0);
-            }
-          }
-        })
-        .fail(function (object, error) {
-          console.log("Error: " + error.code + " " + error.message);
-        });
-    }
-
-    function addCount(Counter) {
-      var $visitors = $(".leancloud_visitors");
-      var url = $visitors.attr('id').trim();
-      var title = $visitors.attr('data-flag-title').trim();
-      var query = new AV.Query(Counter);
-
-      query.equalTo("url", url);
-      query.find({
-        success: function(results) {
-          if (results.length > 0) {
-            var counter = results[0];
-            counter.fetchWhenSave(true);
-            counter.increment("time");
-            counter.save(null, {
-              success: function(counter) {
-                var $element = $(document.getElementById(url));
-                $element.find('.leancloud-visitors-count').text(counter.get('time'));
-              },
-              error: function(counter, error) {
-                console.log('Failed to save Visitor num, with error message: ' + error.message);
-              }
-            });
-          } else {
-            var newcounter = new Counter();
-            /* Set ACL */
-            var acl = new AV.ACL();
-            acl.setPublicReadAccess(true);
-            acl.setPublicWriteAccess(true);
-            newcounter.setACL(acl);
-            /* End Set ACL */
-            newcounter.set("title", title);
-            newcounter.set("url", url);
-            newcounter.set("time", 1);
-            newcounter.save(null, {
-              success: function(newcounter) {
-                var $element = $(document.getElementById(url));
-                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
-              },
-              error: function(newcounter, error) {
-                console.log('Failed to create');
-              }
-            });
-          }
-        },
-        error: function(error) {
-          console.log('Error:' + error.code + " " + error.message);
-        }
-      });
-    }
-
-    $(function() {
-      var Counter = AV.Object.extend("Counter");
-      if ($('.leancloud_visitors').length == 1) {
-        addCount(Counter);
-      } else if ($('.post-title-link').length > 1) {
-        showTime(Counter);
-      }
-    });
-  </script>
-
-
 
   
 <script>
