@@ -1305,12 +1305,12 @@ $(".hk-box").on("touchend", function(e) {
     X = moveEndX - startX,
     Y = moveEndY - startY;
     //左滑
-    if ( X > 0 ) {
+    if ( X < 0 ) {
         $(e.currentTarget).hide();
         $(e.currentTarget).next().show();         
     }
     //右滑
-    else if ( X < 0 ) {
+    else if ( X > 0 ) {
         $(e.currentTarget).hide();
         $(e.currentTarget).prev().show();      
     }
