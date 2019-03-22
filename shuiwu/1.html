@@ -1304,14 +1304,15 @@ $(".hk-box").on("touchend", function(e) {
     moveEndY = e.changedTouches[0].pageY,
     X = moveEndX - startX,
     Y = moveEndY - startY;
-    console.log($(e.currentTarget).prev('div.hk-box').html());
+    
     //左滑
     if ( X < 0 && $(e.currentTarget).next()) {
         $(e.currentTarget).hide();
         $(e.currentTarget).next().show();
     }
     //右滑
-    else if ( X > 0 && $(e.currentTarget).prev('div.hk-box')) {
+    else if ( X > 0) {
+        console.log($(e.currentTarget).prev('div.hk-box').html());
         $(e.currentTarget).hide();
         $(e.currentTarget).prev('div.hk-box').show();
 
