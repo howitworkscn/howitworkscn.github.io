@@ -58,7 +58,7 @@ if (!((window.DocumentTouch && document instanceof DocumentTouch) || 'ontouchsta
 //设置变量
 //app服务器地址
 //var appServerAddr="http://dzbstest.wintax.cn";
-var appServerAddr="http://dzbstest.gdltax.gov.cn";
+var appServerAddr="http://www.howitworks.cn";
 if(window.location.href.indexOf("file://")==-1&&window.location.href.indexOf("://")!=-1){
 	appServerAddr = window.location.href.substring(window.location.href.indexOf("://")+3);
 	appServerAddr = appServerAddr.substring(0,appServerAddr.indexOf("/appserver"));
@@ -670,6 +670,7 @@ var opt = {
 
 
 function checkIsBindZrr(binded){
+    /*
 	var callBack = {};
 	callBack.waitMsg = "正在获取个人绑定信息，请稍候...";
 	callBack.url = appServerAddr+"/appserver/security/binduser/getWebAppUserDetails.do?callback=?&time="+new Date().getTime();
@@ -696,6 +697,7 @@ function checkIsBindZrr(binded){
 		}
 	};
 	callJsonP(callBack);
+    */
 }
 
 function checkIsBindNsr(binded){
