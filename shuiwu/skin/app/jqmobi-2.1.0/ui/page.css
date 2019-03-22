@@ -1,0 +1,2323 @@
+@charset "utf-8";
+/* CSS Document */
+#afui.android .font-blue{ color:#007cdc;}
+#afui.android .font-red{color:#F00;}
+#afui.android .font-Grey{color:#4e4e4e;}
+#afui.android .font-green{color:#1bcd3c;}
+#afui.android .input-lr input{	
+	background-color: #dff0ff;
+	font-size: 1em;
+	color: #007cdc;
+	height: 26px;
+	border: 1px solid #FFF;
+	text-align: right;
+}
+#afui.android .input-dr input{
+	background-color: #f2f2f2;
+	font-size: 1em;
+	color: #999;
+	height: 26px;
+	border: 1px solid #FFF;
+	text-align: right;
+}
+#afui.android li{
+	margin: 0px;
+	padding: 0px;
+	list-style-image: none;
+	list-style-type: none;
+}
+#afui.android header span{
+	background-image: url(../../images/android/head/left.png);
+	background-repeat: no-repeat;
+	display: block;
+	width: 83px;
+	position: absolute;
+	cursor: pointer;
+	text-align: center;
+	font-size: 16px;
+	font-family: "微软雅黑";
+	line-height: 3;
+	padding-left: 5px;
+}
+#afui.android .headerright{
+	background-image: url(../../images/android/head/right.png);
+	float: right;
+	position: relative;
+}
+#afui.android .date-box{
+	height: 100%;
+	width: 100%;
+	background-color: #FFF;
+	float: left;
+}
+#afui.android .date-top{
+	background-color: #2391c9;
+	height: 80px;
+	text-align: center;
+	line-height: 80px;
+	 font-size: 1.2em;
+	 
+}
+#afui.android .date-left, #afui.android .date-right {
+	display: block;
+	height: 80px;
+	width: 80px;
+	position: absolute;
+	cursor: pointer;
+}
+#afui.android .date-left{
+	background-image: url(../../images/android/date/left.png);
+	background-repeat: no-repeat;
+	float: left;
+	display: block;
+}
+#afui.android .date-right{
+	background-image: url(../../images/android/date/right.png);
+	background-repeat: no-repeat;
+	float: right;
+	display: block;
+	top: 8px;
+	right: 0px;
+}
+#afui.android .date-table table{
+	background-color: #d3eff9;
+}
+#afui.android .date-table td{
+	font-size: 1.2em;
+	text-align: center;
+	line-height: 40px;
+	height: 40px;
+ 
+	color: #454545;
+}
+#afui.android .date-td01{
+	border-right-width: 1px;
+	border-right-style: solid;
+	border-right-color: #acd4e3;
+}
+#afui.android .date-td02{
+	background-color: #b2e8fc;
+}
+#afui.android .date-td03{
+	border-right-width: 1px;
+	border-right-style: solid;
+	border-right-color: #acd4e3;background-color: #b2e8fc;
+}
+#afui.android .date-table span{
+	height: 40px;
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+	width: 40px;
+}
+#afui.android .date-table-span {
+	background-image: url(../../images/android/date/date.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	color: #FFF;
+	 
+	 
+}
+#afui.android .date-txt{
+	padding: 15px;
+	color: #000;
+	background-color: #FFF;
+	cursor: pointer;
+}
+#afui.android .map-div{
+	background-image: url(../../images/android/map/bg.png);
+	background-repeat: no-repeat;
+	background-position: center top;
+	height: 100%;
+}
+#afui.android .map-title{
+	font-family: "微软雅黑";
+	font-size: 1.3em;
+	font-weight: normal;
+	color: #666;
+	line-height: 33px;
+	height: 33px;
+}
+#afui.android .map-listbox{
+	background-color: #FFF;
+	border: 1px solid #ababab;
+	color: #333;
+	padding: 10px;
+	margin-top: 8px;
+}
+#afui.android .map-listbox h1{
+	font-size: 1.3em;
+	color: #000;
+	font-weight: normal;
+	margin: 0px;
+	padding: 0px;
+	overflow: hidden;
+}
+#afui.android .map-listbox h1 p{
+	float: left;
+	font-size: 1em;
+}
+#afui.android .map-listbox h1 span{
+	background-image: url(../../images/android/map/dot02.png);
+	display: block;
+	height: 43px;
+	width: 44px;
+	clip: rect(auto,auto,auto,auto);
+	cursor: pointer;
+	float: right;
+}
+#afui.android .map-listbox ul {overflow: hidden;}
+#afui.android .map-listbox ul li{
+
+	font-size: 1em;
+	color: #999;
+	font-family: "微软雅黑";
+	padding-bottom: 5px;
+}
+#afui.android .tax-site{
+	color: #393939;
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: #e5e5e5;
+	font-size: 1em;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+#afui.android .map-starting{
+ 
+}
+#afui.android .map-starting span{
+	background-color: #3899cf;
+	display: block;
+	height: 40px;
+	width: 40px;
+	font-family: "微软雅黑";
+	font-size: 1.3em;
+	line-height: 40px;
+	color: #FFF;
+	text-align: center;
+	font-weight: bold;
+	border-radius: 4px;
+	margin-top: 3px;
+	margin-left: 5px;
+	float: left;
+}
+#afui.android .map-starting input{
+	border: 1px solid #939393;
+	background-color: #fcfcfc;
+	color: #000;
+	 font-size: 1.2em;
+	font-family: "微软雅黑";
+	width: 100%;
+	line-height: 48px;
+	background-image: url(../../images/android/map/qi.png);
+	background-repeat: no-repeat;
+	background-position: left center;
+	height: 48px;
+	padding-left: 50px;
+}
+#afui.android .map-finish input{
+	border: 1px solid #CCCCCC;
+	background-color: #f2f1f1;
+	color: #9ea6ae;
+	 font-size: 1.2em;
+	font-family: "微软雅黑";
+	width: 100%;
+	line-height: 48px;
+	background-image: url(../../images/android/map/zd.png);
+	background-repeat: no-repeat;
+	background-position: left center;
+	height: 48px;
+	padding-left: 50px;
+}
+#afui.android .map-btn {
+	height: 48px;
+	margin-bottom: 20px;
+}
+#afui.android .map-btn a{
+	font-family: "微软雅黑";
+	 font-size: 1.2em;
+	line-height: 48px;
+	color: #FFF;
+	background-color: #1bcd3c;
+	display: block;
+	height: 48px;
+	border: 1px solid #14a42f;
+	text-decoration: none;
+	text-align: center;
+	width: 48%;
+}
+#afui.android .map-box{
+	background-color: #FFF;
+	height: 100%;
+	width: 100%;
+	border: 1px solid #bfbfbf;
+}
+#afui.android .directory-div{
+	background-color: #fefefe;
+	border: 1px solid #bfbfbf;
+	height: 100%;
+}
+#afui.android .directory-div ul{
+	font-family: "微软雅黑";
+	font-size: 1.3em;
+	color: #000;
+	background-image: url(../../images/android/directory/dot.png);
+	background-repeat: no-repeat;
+	background-position: right center;
+	height: 65px;
+	line-height: 65px;
+	margin: 0px;
+	padding: 0px;
+}
+#afui.android .directory-div li{
+	height: 1px;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #CCCCCC;
+}
+#afui.android .Search-box table{
+	background-color: #FFF;
+	border: 1px solid #bfbfbf;
+}
+#afui.android .Search-box td{
+	height: 40px;
+	margin: 0px;
+	padding: 0px;
+}
+#afui.android .Search-box input{
+	width: 99%;
+	line-height: 40px;
+	height: 40px;
+	border: 1px solid #fff;
+	color: #666;
+	font-family: "微软雅黑";
+	font-size: 1.3em;
+	background-color: #FFF;
+	margin: 0px;	
+}
+#afui.android .Search-box a{
+	background-image: url(../../images/android/Search/icon.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	display: block;
+	height: 38px;
+	width: 48px;
+	margin: 0px;
+	padding: 0px;
+	float: left;
+}
+#afui.android .list-div{
+	background-color: #fefefe;
+	border: 1px solid #bfbfbf;
+	margin-top: 15px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+#afui.android .list-div span{
+	
+	font-family: "微软雅黑";
+	display: block;
+}
+#afui.android .list-div ul{
+	color: #000;
+	margin: 0px;
+	padding-top: 5px;
+	padding-right: 55px;
+	padding-bottom: 0px;
+	padding-left: 15px;
+	background-image: url(../../images/android/list/dot.png);
+	background-repeat: no-repeat;
+	background-position: right top;
+}
+#afui.android .list-date{color: #bbbbbb;}
+#afui.android .list-text{
+	 font-size: 1.2em;
+	line-height: 28px;
+}
+#afui.android .list-div li{
+	list-style-image: none;
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+	height: 8px;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #d3d3d3;
+}
+#afui.android .div-box01{
+	background-color: #FFFFFF;
+	border: 1px solid #bfbfbf;
+	background-image: url(../../images/android/box01/01.png);
+	background-repeat: no-repeat;
+	background-position: left top;
+	padding-top: 30px;
+	padding-bottom: 20px;
+}
+#afui.android .title-box01 {
+	margin-right: 35px;
+	margin-left: 35px;
+	line-height: 48px;
+	height: 48px;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #d1d1d1;
+}
+#afui.android .title-box01 span{
+	display: block;
+	border-bottom-width: 2px;
+	border-bottom-style: solid;
+	border-bottom-color: #d1d1d1;
+	font-size: 1.3em;
+	color: #000;
+	font-family: "微软雅黑";
+	white-space: nowrap;
+	width: 180px;
+	line-height: 47px;
+	height: 47px;
+}
+#afui.android .main-box01 {
+	margin-right: 35px;
+	margin-left: 35px;
+}
+#afui.android .title-txt{
+	font-family: "微软雅黑";
+	 font-size: 1.2em;
+	color: #000;
+	font-weight: normal;
+	line-height: 23px;
+	margin-top: 8px;
+	padding-top: 15px;
+	padding-bottom: 8px;
+	vertical-align: top;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #f0f0f0;
+}
+#afui.android .tel-box01 td{
+	color: #333;
+	font-family: "微软雅黑";
+	 font-size: 1 em;
+	height: 40px;
+}
+#afui.android .tel-box01 span{
+	display: block;
+	float: left;
+	width: 49%;
+	font-size: 1em;
+}
+#afui.android .tel-box01 a{
+	color: #F00;
+	text-decoration: none;
+}
+#afui.android .Address-box01{
+	font-family: "微软雅黑";
+	font-size: 1em;
+	color: #000;
+}
+#afui.android .dz-box01 td{
+	 font-size: 1 em;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	vertical-align: top;
+	color: #000;
+}
+#afui.android .dz2-box01{
+	display: block;
+	float: left;
+	width: 70%;
+	line-height: 30px;
+	margin: 0px;
+	padding: 0px;
+}
+
+#afui.android .div-box02{
+	background-color: #FFFFFF;
+	border: 1px solid #bfbfbf;
+	background-image: url(../../images/android/box01/02.png);
+	background-repeat: no-repeat;
+	background-position: left top;
+	padding-top: 30px;
+	padding-bottom: 20px;
+	margin-top: 10px;
+}
+#afui.android .title-box02 {
+	margin-right: 35px;
+	margin-left: 35px;
+	line-height: 48px;
+	height: 48px;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #d1d1d1;
+}
+#afui.android .title-box02 span{
+	display: block;
+	border-bottom-width: 2px;
+	border-bottom-style: solid;
+	border-bottom-color: #d1d1d1;
+	font-size: 1.3em;
+	color: #000;
+	font-family: "微软雅黑";
+	white-space: nowrap;
+	width: 220px;
+	line-height: 47px;
+	height: 47px;
+}
+ 
+#afui.android .main-box02{
+	margin-right: 35px;
+	margin-left: 35px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+#afui.android .main-box02 a{
+	background-color: #f8f8f8;
+	display: block;
+	float: left;
+	padding-top: 15px;
+	padding-right: 9px;
+	padding-left: 50px;
+	font-family: "微软雅黑";
+	text-decoration: none;
+	color: #000;
+	background-image: url(../../images/android/box02/dot01.png);
+	background-repeat: no-repeat;
+	background-position: left top;
+	height: 62px;
+	line-height: 18px;
+	width: 46%;
+	margin-right: 2%;
+	margin-left: 2%;
+	font-size: 1em;
+	margin-bottom: 8px;
+}
+#afui.android a.current-btn{
+	color: #FFF;
+	background-color: #0ba424;
+	background-image: url(../../images/android/box02/dot02.png);
+}
+
+#afui.android .div-box03{
+	background-color: #FFFFFF;
+	border: 1px solid #bfbfbf;
+	background-image: url(../../images/android/box01/03.png);
+	background-repeat: no-repeat;
+	background-position: left top;
+	padding-top: 30px;
+	padding-bottom: 20px;
+	margin-top: 10px;
+}
+#afui.android .title-box03 {
+	margin-right: 35px;
+	margin-left: 35px;
+	line-height: 48px;
+	height: 48px;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #d1d1d1;
+}
+#afui.android .title-box03 span{
+	display: block;
+	border-bottom-width: 2px;
+	border-bottom-style: solid;
+	border-bottom-color: #d1d1d1;
+	font-size: 1.3em;
+	color: #000;
+	font-family: "微软雅黑";
+	white-space: nowrap;
+	width: 180px;
+	line-height: 47px;
+	height: 47px;
+}
+ 
+#afui.android .main-box03{
+	margin-right: 35px;
+	margin-left: 35px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+#afui.android .main-box03 a{
+	background-color: #f8f8f8;
+	display: block;
+	float: left;
+	font-family: "微软雅黑";
+	text-decoration: none;
+	color: #000;
+	background-repeat: no-repeat;
+	background-position: left top;
+	height: 50px;
+	line-height: 50px;
+	width: 31%;
+	margin-right: 1%;
+	margin-left: 1%;
+	 font-size: 1.2em;
+	margin-bottom: 8px;
+	text-align: center;
+	font-weight: normal;
+}
+#afui.android a.current-date{
+	color: #FFF;
+	background-color: #0ba424;
+}
+#afui.android .main-box04{
+	margin-right: 35px;
+	margin-left: 35px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+#afui.android .main-box04 a{
+	display: block;
+	float: left;
+	font-family: "微软雅黑";
+	text-decoration: none;
+	color: #000;
+	background-repeat: no-repeat;
+	background-position: left top;
+	height: 76px;
+	line-height: 26px;
+	width: 46%;
+	margin-right: 2%;
+	margin-left: 2%;
+	 font-size: 1 em;
+	margin-bottom: 8px;
+	text-align: left;
+	font-weight: normal;
+	padding-top: 8px;
+	padding-left: 15px;
+	border-bottom-width: 3px;
+	border-bottom-style: solid;
+	border-bottom-color: #e4e4e4;
+}
+#afui.android a.current-time{
+	border-bottom-width: 3px;
+	border-bottom-style: solid;
+	border-bottom-color: #0ba424;
+	background-image: url(../../images/android/box02/dot03.png);
+	background-repeat: no-repeat;
+	background-position: right bottom;
+}
+#afui.android .main-box04 strong{
+	font-weight: normal;
+	color: #F00;
+}
+#afui.android .select-box{
+	background-color: #FFF;
+	border: 1px solid #bfbfbf;
+}
+#afui.android .select-menu a{
+	font-size: 1em;
+	color: white;
+	font-family:"微软雅黑";
+	display: block;
+	float: left;
+	width: 23%;
+	line-height: 35px;
+	text-align: center;
+	height: 35px;
+	margin: 1%;
+	text-decoration: none;
+	background-color: #1bcd3c;
+	border: 1px solid #14a42f;
+}
+#afui.android a.current-menu{
+	color: #FFF;
+	background-color: #0d9610;
+}
+#afui.android .select-list{
+	margin-right: 1%;
+	margin-left: 1%;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+#afui.android .select-list a{
+	line-height: 40px;
+	display: block;
+	height: 40px;
+	color: #000;
+	text-decoration: none;
+	font-family: "微软雅黑";
+	background-image: url(../../images/android/select/dot.png);
+	background-repeat: no-repeat;
+	background-position: left center;
+	padding-left: 50px;
+}
+#afui.android .select-list li{
+	margin: 0px;
+	padding: 0px;
+	height: 1px;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #CCC;
+	list-style-image: none;
+	list-style-type: none;
+}
+#afui.android .txt-div{
+	background-color: #FFFFFF;
+	border: 1px solid #bfbfbf;
+	color: #000;
+	line-height: 22px;
+	font-size: 1em;
+	font-family: "微软雅黑";
+	padding: 15px;
+}
+#afui.android .txt-title{
+	font-size: 1.3em;
+	font-family: "微软雅黑";
+}
+#afui.android .txt-color01{
+	color: #F00;
+}
+#afui.android .txt-img{
+	text-align: center;
+	display: block;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+#afui.android .news-div{
+	background-color: #FFFFFF;
+	border: 1px solid #bfbfbf;
+	color: #000;
+	line-height: 50px;
+	height: 50px;
+	background-image: url(../../images/android/news/right.png);
+	background-repeat: no-repeat;
+	background-position: right center;
+}
+#afui.android .news-div span{
+	display: block;
+	height: 48px;
+	line-height: 48px;
+}
+#afui.android .news-title{
+	float: left;
+	background-image: url(../../images/android/news/left.png);
+	background-repeat: no-repeat;
+	background-position: left center;
+	padding-left: 50px;
+	font-size: 1.2em;
+	font-family: "微软雅黑";
+}
+#afui.android .news-number{
+	float: right;
+	line-height: 46px;
+	color: #FFF;
+	background-image: url(../../images/android/news/nb.png);
+	height: 46px;
+	width: 35px;
+	text-align: center;
+	margin-right: 38px;
+	font-family: "微软雅黑";
+}
+#afui.android .news-box{
+	background-color: #FFFFFF;
+	border: 1px solid #bfbfbf;
+	color: #000;
+	margin-top: 15px;
+}
+#afui.android .news-box span{
+	display: block;
+}
+#afui.android .news-box ul{
+	margin: 0px;
+	padding-top: 5px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+}
+#afui.android .news-span01{
+	background-image: url(../../images/android/news/icon01.png);
+	background-repeat: no-repeat;
+	background-position: right top;
+	font-family: "微软雅黑";
+	font-size: 1.1em;
+	padding-right: 55px;
+	padding-left: 15px;
+	padding-top: 13px;
+	padding-bottom: 5px;
+}
+#afui.android .news-span02{
+	background-image: url(../../images/android/news/icon02.png);
+	background-repeat: no-repeat;
+	background-position: right top;
+	font-family: "微软雅黑";
+	font-size: 1.1em;
+	padding-right: 55px;
+	padding-left: 15px;
+	padding-top: 13px;
+	padding-bottom: 5px;
+}
+#afui.android .news-date{
+	font-family: "微软雅黑";
+	font-size: 0.8em;
+	padding-bottom: 8px;
+	padding-left: 15px;
+	color: #999;
+}
+#afui.android .news-date p{
+	display: block;
+	padding-right: 0px;
+	padding-bottom: 8px;
+	padding-left: 0px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+#afui.android .news-left{
+	float: left;
+}
+#afui.android .news-right{
+	float: right;
+	margin-right: 25px;
+}
+#afui.android .news-box li{
+	height: 1px;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #CCCCCC;
+}
+#afui.android .nrpage-title{
+	font-size: 1.3em;
+	font-family: "微软雅黑";
+	text-align: center;
+	display: block;
+}
+#afui.android .nrpage-date{
+	font-size: 0.9em;
+	text-align: center;
+	display: block;
+	color: #666;
+}
+#afui.android .bszn-box{
+	background-color: #FFFFFF;
+	border: 1px solid #bfbfbf;
+	color: #000;
+	margin-bottom: 10px;
+}
+#afui.android .bszn-title{
+	padding: 0px;
+	margin-top: 15px;
+	margin-right: 15px;
+	margin-left: 15px;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #d1d1d1;
+	margin-bottom: 15px;
+}
+#afui.android .bszn-title span{
+	float: left;
+	border-bottom-width: 2px;
+	border-bottom-style: solid;
+	border-bottom-color: #d1d1d1;
+	font-size: 1.2em;
+	font-family: "微软雅黑";
+	color: #000;
+	padding-bottom: 5px;
+}
+#afui.android .bszn-txt01{
+	margin: 15px;
+	line-height: 1.5em;
+	font-size: 0.9em;
+}
+#afui.android .bszn-txt01 span{
+	line-height: 1.5em;
+	display: block;
+	margin-top: 12px;
+	margin-bottom: 12px;
+}
+#afui.android .bszn-font{
+	color: #F00;
+}
+#afui.android .bszn-sm{
+	font-size: 0.9em;
+	color: #666;
+}
+
+
+#afui.android .notes-box{
+	background-color: #FFFFFF;
+	border: 1px solid #bfbfbf;
+	color: #000;
+	margin-bottom: 10px;
+}
+#afui.android .notes-title{
+	padding: 0px;
+	margin-top: 15px;
+	margin-right: 15px;
+	margin-left: 15px;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #d1d1d1;
+	margin-bottom: 0px;
+}
+#afui.android .notes-title span{
+	float: left;
+	border-bottom-width: 2px;
+	border-bottom-style: solid;
+	border-bottom-color: #d1d1d1;
+	font-size: 1.2em;
+	font-family: "微软雅黑";
+	color: #000;
+	padding-bottom: 5px;
+}
+#afui.android .notes-txt01{
+	margin: 15px;
+	line-height: 1.5em;
+	font-size: 0.9em;
+}
+#afui.android .notes-txt01 span{
+	display: block;
+	padding-top: 3px;
+	padding-bottom: 3px;
+}
+
+
+#afui.android .notes-box{
+	background-color: #FFFFFF;
+	border: 1px solid #bfbfbf;
+	color: #000;
+	margin-bottom: 10px;
+}
+#afui.android .notes-title{
+	padding: 0px;
+	margin-top: 15px;
+	margin-right: 15px;
+	margin-left: 15px;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #d1d1d1;
+	margin-bottom: 0px;
+}
+#afui.android .notes-title span{
+	float: left;
+	border-bottom-width: 2px;
+	border-bottom-style: solid;
+	border-bottom-color: #d1d1d1;
+	font-size: 1.2em;
+	font-family: "微软雅黑";
+	color: #000;
+	padding-bottom: 5px;
+}
+#afui.android .input-table{
+	margin-right: 15px;
+	margin-left: 15px;
+	margin-top: 3px;
+	margin-bottom: 15px;
+}
+#afui.android .input-table td{
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #d1d1d1;
+	line-height: 1.5;
+	height: 100%;
+	font-family: "微软雅黑";
+	background-image: url(../../images/android/input/border01.png);
+	background-repeat: no-repeat;
+	background-position: right bottom;
+	padding: 1px;
+	font-size: 1.1em;
+}
+
+#afui.android .input-table th{
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #d1d1d1;
+	line-height: 1.5;
+	height: 100%;
+	font-family: "微软雅黑";
+	background-repeat: no-repeat;
+	background-position: right bottom;
+	padding: 1px;
+	font-size: 1.1em;
+	font-weight: normal;
+	text-align: center;
+}
+#afui.android .input-table input{
+	height: 150%;
+	width: 100%;
+	line-height: 100%;
+	color: #1171d3;
+	margin: 0px;
+}
+#afui.android .menu-btn-disable {
+	height: 48px;
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
+
+#afui.android .menu-btn-disable a {
+	font-family: "微软雅黑";
+	font-size: 1em; 
+	color: #FFF;
+	width: 100%;
+	line-height: 1.5em;
+	display: inline-block; 
+	zoom: 1; /* zoom and *display = ie7 hack for display:inline-block */ 
+	*display: inline; 
+	vertical-align: baseline; 
+	outline: none; 
+	cursor: pointer; 
+	text-align: center; 
+	text-decoration: none; 
+	padding-top: .5em; 
+	padding-bottom: .5em; 
+	text-shadow: 0 1px 1px rgba(0,0,0,.3); 
+	-webkit-border-radius: .2em; 
+	-moz-border-radius: .2em; 
+	border-radius: .2em; 
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2); 
+	-moz-box-shadow: 0 1px 2px rgba(0,0,0,.2); 
+	box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	border: solid 1px gray; 
+	background: gray; 
+}
+#afui.android .menu-btn {
+	height: 48px;
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
+#afui.android .menu-btn a {
+	font-family: "微软雅黑";
+	font-size: 1em; 
+	color: #FFF;
+	width: 100%;
+	line-height: 1.5em;
+	display: inline-block; 
+	zoom: 1; /* zoom and *display = ie7 hack for display:inline-block */ 
+	*display: inline; 
+	vertical-align: baseline; 
+	outline: none; 
+	cursor: pointer; 
+	text-align: center; 
+	text-decoration: none; 
+	padding-top: .5em; 
+	padding-bottom: .5em; 
+	text-shadow: 0 1px 1px rgba(0,0,0,.3); 
+	-webkit-border-radius: .2em; 
+	-moz-border-radius: .2em; 
+	border-radius: .2em; 
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2); 
+	-moz-box-shadow: 0 1px 2px rgba(0,0,0,.2); 
+	box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	border: solid 1px #0076a3; 
+	background: #13699f; 
+} 
+#afui.android .menu-btn a:hover { 
+	text-decoration: none; 
+	background: #007ead; 
+	background: -webkit-gradient(linear, left top, left bottom, from(#0095cc), to(#00678e)); 
+	background: -moz-linear-gradient(top, #0095cc, #00678e); 
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0095cc', endColorstr='#00678e');
+} 
+#afui.android .menu-btn a:active { 
+	position: relative; 
+	top: 1px; 
+	background: -webkit-gradient(linear, left top, left bottom, from(#0078a5), to(#00adee)); 
+	background: -moz-linear-gradient(top, #0078a5, #00adee); 
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0078a5', endColorstr='#00adee'); 
+}
+#afui.android .option-btn {
+	float: left;
+	height: 2em;
+	margin-left: 5px;
+}
+#afui.android .option-btn a {
+	font-family: "微软雅黑";
+	font-size: 0.8em; 
+	color: #FFF;
+	line-height: 1.6em;
+	display: inline-block; 
+	zoom: 1; /* zoom and *display = ie7 hack for display:inline-block */ 
+	*display: inline; 
+	vertical-align: baseline; 
+	outline: none; 
+	cursor: pointer; 
+	text-align: center; 
+	text-decoration: none; 
+	padding: 2px 5px; 
+	text-shadow: 0 1px 1px rgba(0,0,0,.3); 
+	-webkit-border-radius: .2em; 
+	-moz-border-radius: .2em; 
+	border-radius: .2em; 
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2); 
+	-moz-box-shadow: 0 1px 2px rgba(0,0,0,.2); 
+	box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	border: solid 1px #0076a3; 
+	background: #13699f; 
+} 
+#afui.android .option-btn a:hover { 
+	text-decoration: none; 
+	background: #007ead; 
+	background: -webkit-gradient(linear, left top, left bottom, from(#0095cc), to(#00678e)); 
+	background: -moz-linear-gradient(top, #0095cc, #00678e); 
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0095cc', endColorstr='#00678e');
+} 
+#afui.android .option-btn a:active { 
+	position: relative; 
+	top: 1px; 
+	background: -webkit-gradient(linear, left top, left bottom, from(#0078a5), to(#00adee)); 
+	background: -moz-linear-gradient(top, #0078a5, #00adee); 
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0078a5', endColorstr='#00adee'); 
+}
+#afui.android .touxiang {
+	height: 3.5em;
+	width: 3.5em;
+	margin:0.5em;
+	border-radius: 50px;
+	box-shadow:0px 0px 0px 0.3em #cccccc;
+}
+#afui.android .fp-box{
+	margin-right: 15px;
+	margin-left: 15px;
+}
+#afui.android .fp-box ul{
+	padding: 0px;
+	margin-top: 7px;
+	margin-right: 0px;
+	margin-bottom: 7px;
+	margin-left: 0px;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #d1d1d1;
+}
+#afui.android .fp-box li{
+	font-size: 1em;
+	line-height: 2em;
+}
+#afui.android .fp-box span{
+	font-size: 1em;
+	line-height: 1.2em;
+	color: #007cdc;
+	height: 1.2em;
+	display: block;
+	margin-bottom: 5px;
+}
+#afui.android .lc-box{
+	margin-right: 15px;
+	margin-left: 15px;
+	margin-bottom: 15px;
+}
+#afui.android .lc-list ul{
+	font-size: 1em;
+}
+#afui.android .lc-list span{
+	float: left;
+	display: block;
+	font-size: 0.9em;
+	color: #666;
+	font-family: "微软雅黑";
+}
+#afui.android .lc-border{
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #d1d1d1;
+	margin-top: 8px;
+	margin-bottom: 8px;
+}
+#afui.android .sb-listbox{
+	background-color: #FFF;
+	border: 1px solid #ababab;
+	color: #333;
+	padding: 10px;
+	margin-top: 8px;
+}
+#afui.android .sb-listbox h1{
+	font-size: 1.3em;
+	color: #000;
+	font-weight: normal;
+	margin: 0px;
+	padding: 0px;
+	overflow: hidden;
+}
+#afui.android .sb-listbox h1 p{
+	float: left;
+	font-size: 1em;
+}
+#afui.android .sb-listbox h1 span{
+	display: block;
+	height: 1.5em;
+	width: 4em;
+	clip: rect(auto,auto,auto,auto);
+	cursor: pointer;
+	float: right;
+	background-color: #12a10b;
+	text-align: center;
+	line-height: 1.5em;
+	font-size: 0.8em;
+	font-family: "微软雅黑";
+	color: #FFF;
+}
+#afui.android .sb-listbox ul {overflow: hidden;}
+#afui.android .sb-listbox ul li{
+	font-size: 0.85em;
+	color: #999;
+	font-family: "微软雅黑";
+	padding-bottom: 5px;
+}
+#afui.android .cxqk-box{
+	border-top-width: 3px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #36c902;
+	border-right-color: #bfbfbf;
+	border-bottom-color: #bfbfbf;
+	border-left-color: #bfbfbf;
+	background-color: #FFF;
+	color: #000;
+}
+#afui.android .page-nb{	margin: 6px;}
+#afui.android .page-nb span{
+	background-color: #36c902;
+	display: block;
+	height: 36px;
+	width: 36px;
+	border-radius: 50px;
+	line-height: 36px;
+	color: #FFF;
+	text-align: center;
+	font-family: "微软雅黑";
+	font-weight: bold;
+	font-size: 1.2em;
+	float: left;
+
+}
+#afui.android .page-nb li{
+	float: left;
+	font-size: 0.8em;
+	font-family: "微软雅黑";
+	line-height: 36px;
+	height: 36px;
+	color: #666;
+	padding-left: 6px;
+}
+#afui.android .input-txt{
+	color: #1171d3;
+}
+#afui.android .dot{
+	padding-top: 10px;
+	padding-bottom: 10px;
+	text-align: center;
+}
+#afui.android .carousel_paging_selected{
+	width: 15px;
+	height: 15px;
+	background-color: #33b505;
+	border-radius :50px;
+}
+#afui.android .carousel_paging{
+	width: 15px;
+	height: 15px;
+	background-color: #ffffff;
+	border-radius :50px;
+}
+#afui.android .hk-box{
+	border-top-width: 3px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #bfbfbf;
+	border-right-color: #bfbfbf;
+	border-bottom-color: #bfbfbf;
+	border-left-color: #bfbfbf;
+	background-color: #FFF;
+	color: #000;
+}
+#afui.android .select-Display{
+	float: left;
+}
+#afui.android .select-btn{
+	float: right;
+}
+#afui.android .select-btn-disable{
+	float: right;
+}
+#afui.android .Display-box{
+	overflow: hidden;
+	color: #000;
+	padding-top: 8px;
+	padding-bottom: 8px;
+}
+#afui.android .select-Display {
+	float: left;	padding-top: 0.8em;
+}
+#afui.android .select-Display  span{
+	float: left;
+	display: block;
+}
+#afui.android .Display-title{
+	font-size: 1.1em;
+	font-family: "微软雅黑";
+
+}
+#afui.android .Display-span1{
+	height: 24px;
+	width: 24px;
+	border: 2px solid #36c902;
+	background-color: #eaffe2;
+	border-radius: 50px;
+	color: #35b009;
+	text-align: center;
+	line-height: 20px;
+	font-size: 0.7px;
+	margin-right: 2px;
+	margin-left: 2px;
+}
+#afui.android .Display-span2{
+	height: 24px;
+	width: 24px;
+	border: 3px solid #ededed;
+	background-color: #f5f5f5;
+	border-radius: 50px;
+	color: #d5d5d5;
+	text-align: center;
+	line-height: 20px;
+	font-size: 0.7px;
+	margin-right: 2px;
+	margin-left: 2px;
+}
+#afui.android .select-btn a{
+	display: block;
+	font-family: "微软雅黑";
+	font-size: 1.1em;
+	color: #FFF;
+	background-color: #33b505;
+	text-decoration: none;
+	padding-top: 0.5em;
+	padding-right: 0.9em;
+	padding-bottom: 0.5em;
+	padding-left: 0.9em;
+}
+#afui.android .select-btn-disable a{
+	display: block;
+	font-family: "微软雅黑";
+	font-size: 1.1em;
+	color: #FFF;
+	background-color: #CCCCCC;
+	text-decoration: none;
+	padding-top: 0.5em;
+	padding-right: 0.9em;
+	padding-bottom: 0.5em;
+	padding-left: 0.9em;
+}
+#afui.android .select01{
+	border: 1px solid #dfd9d9;
+	border-radius: 50px;
+	width: 5em;
+	overflow: hidden;
+	height: 30px;
+}
+#afui.android .select01 a{
+	text-decoration: none;
+}
+#afui.android .select01 span{
+	text-align: center;
+	font-size: 0.9em;
+	line-height: 30px;
+	height: 30px;
+}
+#afui.android .select01-left{
+	float: left;
+	border-radius: 50px;
+	display: block;
+	width: 40%;
+	text-align: center;
+	color: #333;
+	background-color: #f4f4f4;
+	background-repeat: repeat-y;
+	background-position: right;
+	}
+	#afui.android .select01-right{
+	float: right;
+	display: block;
+	width: 60%;
+	color: #333333;
+	}
+
+
+
+
+#afui.android .select02{border-radius: 50px;
+	border: 1px solid #dfd9d9;
+	border-radius: 3;
+	width: 5em;
+	overflow: hidden;
+	height: 30px;
+}
+#afui.android .select02 a{
+	text-decoration: none;
+}
+#afui.android .select02 span{
+	text-align: center;
+	font-size: 0.9em;
+	line-height: 30px;
+	height: 30px;
+}
+#afui.android .select02-left{
+	float: left;
+	display: block;
+	width: 60%;
+	text-align: center;
+	color: #090;
+	background-repeat: repeat-y;
+	background-position: right;
+	}
+	#afui.android .select02-right{
+	float: right;border-radius: 50px;
+	display: block;
+	width: 40%;
+	color: #FFF;
+	background-color: #36c902;
+
+	}
+#afui.android .sb-listbox dt{
+	display: block;
+	float: right;
+	font-size: 0.9px;
+	padding-top: 6px;
+}
+#afui.android .Receipt-box{
+	color: #000;
+	margin-right: 15px;
+	margin-left: 15px;
+	font-size: 1.1em;
+	overflow: hidden;
+	padding-top: 6px;
+	padding-bottom: 6px;
+}
+#afui.android .Receipt-box ul{
+	display: block;
+	float: none;
+	clear: both;
+}
+#afui.android .Receipt-box span{
+	display: block;
+	float: left;
+	padding-top: 0.3em;
+	padding-bottom: 0.3em;	
+}
+#afui.android .Receipt-list{
+	background-color: #fefefe;
+	border: 1px solid #bfbfbf;
+	margin-right: 15px;
+	margin-left: 15px;
+	padding: 15px;
+	margin-bottom: 10px;
+}
+#afui.android .Receipt-list th{
+	font-size: 0.8em;
+	font-weight: normal;
+	text-align: left;
+	height: 1em;
+	color: #000;
+}
+#afui.android .Receipt-list td{
+	font-size: 0.8em;
+	font-weight: normal;
+	text-align: left;
+	height: 1em;
+	color: #065ab1;
+}
+#afui.android .Receipt-box strong{
+	font-weight: normal;
+	color: #007cdc;
+}
+
+#afui.android .bszn02-title{
+	padding: 0px;
+	margin-top: 15px;
+	margin-right: 15px;
+	margin-left: 15px;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #d1d1d1;
+	margin-bottom: 15px;
+}
+#afui.android .bszn02-title span{
+	float: left;
+	border-bottom-width: 2px;
+	border-bottom-style: solid;
+	border-bottom-color: #d1d1d1;
+	font-size: 1.2em;
+	font-family: "微软雅黑";
+	color: #000;
+	padding-bottom: 8px;
+	padding-top: 8px;
+}
+#afui.android .bszn02-title dt{
+	font-size: 1em;
+	color: #FFF;
+	background-color: #30b60b;
+	display: block;
+	float: right;
+	padding-top: 6px;
+	padding-right: 30px;
+	padding-bottom: 6px;
+	padding-left: 30px;
+	border: 1px solid #090;
+	border-radius: 0.3em;
+	font-family: "微软雅黑";
+}
+#afui.android .input-table02{
+	margin-right: 15px;
+	margin-left: 15px;
+	margin-top: 3px;
+	margin-bottom: 15px;
+}
+#afui.android .input-table02 td{
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #d1d1d1;
+	height: 2.5em;
+	line-height: 2.5em;
+	font-family: "微软雅黑";
+	background-image: url(../../images/android/input/border01.png);
+	background-repeat: no-repeat;
+	background-position: right bottom;
+	padding: 1px;
+	vertical-align: bottom;
+	font-size: 0.9em;
+	color: #757575;
+}
+
+#afui.android .input-table02 th{
+	height: 2.5em;
+	line-height: 2.5em;
+	font-family: "微软雅黑";
+	background-repeat: no-repeat;
+	background-position: right bottom;
+	padding: 1px;
+	vertical-align: bottom;
+	font-size: 1.1em;
+	font-weight: normal;
+	text-align: left;
+	background-image: url(../../images/android/input/border01.png);
+	background-repeat: no-repeat;
+	background-position: right bottom;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #d1d1d1;
+	white-space: nowrap;
+	width: 1px;
+}
+#afui.android .input-list01{
+
+	margin-right: 15px;
+	margin-left: 15px;
+}
+#afui.android .input-list01 li{
+	margin-top: 3px;
+}
+#afui.android .input-list01 td{
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #f1f1f1;
+	padding-top: 3px;
+	padding-bottom: 3px;
+}
+ 
+#afui.android .input-list01 table{
+	margin-bottom: 15px;
+}
+#afui.android .sb-listbox-left{
+	float: left;
+}
+#afui.android .sb-listbox-right{
+	float: right;
+}
+
+.numInput{
+	width: 250px;
+	height: auto;
+	background-color: white !important;
+	font-family:"Arial Narrow" !important;
+}
+.numInput div{
+	border: none !important;
+}
+.numInput td{
+	height:55px;
+	width: 50px;
+	text-align: center;
+	font-size: 18px !important;
+	color: #FFFFFF !important;
+	background-color: #13699f;
+	border: 1px solid #13699f;
+}
+.qsh {
+	height: 30px;
+	line-height: 30px;
+	text-align: left;
+	background-image: url("../../images/android/temp/loading.gif");
+	background-repeat: no-repeat;
+	background-position: left;
+	padding-left: 25px;
+}
+.swipe-out > ul { position: relative; }
+.swipe-out > div { position: relative; }
+.swipe-out > li { position: relative; }
+.delete-btn {background-color: #1bcd3c;height: 100%;width: 4.5em;text-align: center;color: white; }
+#afui.android .padding0 {
+	padding: 0px 0px;
+}
+#afui.android .list-box {
+	background-color: #FFFFFF;
+	/* border: 1px solid #bfbfbf; */
+	border: none;
+	color: #000;
+	margin-top: 10px;
+}
+#afui.android .list-box span {
+	display: block;
+	padding-top: 8px;
+	padding-right: 0px;
+	padding-bottom: 8px;
+	padding-left: 8px;
+}
+#afui.android .list-box ul {
+	margin: 0px;
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+}
+#afui.android .list-box li {
+	line-height: 22px;
+	border-bottom: 1px solid #CCCCCC;
+}
+#afui.android .table-list {
+	padding: 6px 6px;
+	display: block;
+	border-bottom: 1px solid #CCCCCC;
+}
+#afui.android .table-list font {
+	color: #999999;
+	font-size: 12px !important;
+}
+#afui.android .right_arrow {
+	width: 14px;
+	height: 20px;
+	background-image: url(../../images/android/list/right_arrow.png);
+	background-repeat: no-repeat;
+	background-position: right center;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+#afui.android .check {
+	width: 20px;
+	height: 20px;
+	background-image: url(../../images/android/list/check.png);
+	background-repeat: no-repeat;
+	background-position: left center;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+#afui.android .checked {
+	width: 23px;
+	height: 21px;
+	background-image: url(../../images/android/list/checked.png);
+	background-repeat: no-repeat;
+	background-position: left center;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+
+/* 税务管家 */
+
+#afui.android .head_animate {
+	background-color: #2391c9;
+	padding: 5% 20% 23% 20%;
+	overflow: hidden;
+}
+
+#afui.android .headh1 {
+	background-color: #2391c9;
+	color: #fff;
+	line-height: 200%;
+	text-indent: 0.5em;
+	font-size: 1.6em;
+}
+
+#afui.android .headh2 {
+	background-color: #2391c9;
+	color: #fff;
+	line-height: 250%;
+	text-indent: 0.5em;
+	font-size: 1em;
+}
+
+#afui.android .headh2 span {
+	
+}
+
+#afui.android .iconlist {
+	border-left: 1px solid #fff;
+	border-top: 1px solid #fff;
+}
+
+#afui.android .iconlist td {
+	width: 50%;
+	text-align: center;
+	color: #666;
+	padding: 0.8em 0;
+	font-size: 1.1em;
+	border-right: 1px solid #fff;
+	border-bottom: 1px solid #fff;
+}
+
+#afui.android .iconlist td:active { 
+	position: relative; 
+	top: 1px; 
+	background: -webkit-gradient(linear, left top, left bottom, from(#efefef), to(#fff)); 
+	background: -moz-linear-gradient(top, #efefef, #fff); 
+}
+
+#afui.android .iconlist td img {
+	display: block;
+	margin: 0px auto;
+	width: 20%;
+	margin-bottom: 0.5em;
+}
+
+#afui.android .tjlist {
+	padding: 10% 15% 0% 15%;
+	background: url(../../images/android/swgj/white_line.png) no-repeat 22% top;
+}
+
+#afui.android .tjlist02 {
+	background: none;
+}
+
+#afui.android .tjlist02 li {
+	
+}
+
+#afui.android .tjlist03 {
+	padding-left: 3%;
+	background: none;
+	padding-right: 3%;
+}
+
+#afui.android .tjlist03 li {
+	background-image: url(../../images/android/swgj/zj.png);
+	padding-bottom: 1em !important;
+	background-repeat: no-repeat;
+	background-position: left top;
+	background-size: auto 99%;
+	display: block;
+	padding-left: 9%;
+}
+
+#afui.android .bt01 {
+	font-size: 1.2em;
+	color: #333
+}
+
+#afui.android .bt01 span {
+	color: #999;
+	padding-left: 1em;
+}
+
+#afui.android .zt01 {
+	font-size: 0.9em;
+	color: #666666;
+}
+
+#afui.android .zt01 .ftcolor01 {
+	color: red;
+	padding-right: 2em
+}
+
+#afui.android .zt01 .ftcolor02 {
+	color: #ff9c00;
+	padding-right: 2em
+}
+
+#afui.android .zt01 .ftcolor03 {
+	color: green;
+	padding-right: 2em
+}
+
+#afui.android .tjlist li {
+	padding-bottom: 2em;
+	overflow: hidden;
+}
+
+#afui.android .tjlist01 li {
+	padding-bottom: 1em;
+}
+
+#afui.android .tjlist img {
+	width: 20%;
+}
+
+#afui.android .tj_name {
+	padding-left: 18%;
+	margin-top: -12%;
+	position: absolute;
+}
+
+#afui.android .tj_name02 {
+	padding-left: 23%;
+	margin-top: -18%;
+	min-height: 3.7em;
+}
+
+#afui.android .tj_name02 h3 {
+	color:black;
+	font-weight: normal;
+	font-size: 1em;
+	padding-bottom: 0.3em;
+}
+
+#afui.android .tj_name02 li {
+	padding-left: 8%;
+	padding-bottom: 0em; 
+	font-size: 0.7em;
+	color: #888;
+	line-height: 150%;
+	background-repeat: no-repeat;
+	background-position: 1% 0.3em;
+	background-size: auto 1em;
+}
+
+#afui.android .tj_name02 .bg {
+	background-image: url(../../images/android/swgj/loading.gif);
+}
+
+#afui.android .tj_name02 .bg01 {
+	background-image: url(../../images/android/swgj/red.png);
+}
+
+#afui.android .tj_name02 .bg02 {
+	background-image: url(../../images/android/swgj/yello.png);
+}
+
+#afui.android .tj_name02 .bg03 {
+	background-image: url(../../images/android/swgj/green.png);
+}
+
+#afui.android .tj_name h2 {
+	font-size: 1.1em;
+	font-weight: normal;
+}
+
+#afui.android .tj_name ol {
+	font-size: 0.9em;
+	color: #666;
+}
+
+#afui.android .btn a {
+	width: 100%;
+	line-height: 220%;
+	border-radius: 3px;
+	display: block;
+	text-align: center;
+	font-size: 1.3em;
+}
+
+#afui.android .btn {
+	padding: 1.5em 1.5em 1em 1.5em;
+}
+
+#afui.android .btn01 a {
+	background-color: #fff;
+	border: 1px solid #adadad;
+	color: #999;
+}
+
+#afui.android .btn02 a {
+	background-color: #2795cd;
+	border: 1px solid #2795cd;
+	color: #fff;
+}
+
+#afui.android .animate_01 {
+	
+}
+
+#afui.android .animate_01 img {
+	width: 100%;
+	animation: myfirst 2s;
+	-webkit-animation: myfirst 8s; /* Safari and Chrome */
+	animation-iteration-count: infinite; /*循环播放*/
+	-webkit-animation-iteration-count: infinite;
+	animation-timing-function: linear; /*匀速运动*/
+	-webkit-animation-timing-function: linear;
+}
+
+@keyframes myfirst
+{
+from {
+ transform: rotate(0deg);
+-webkit-transform: rotate(0deg);}
+to{
+ transform: rotate(-360deg);
+-webkit-transform: rotate(-360deg);}
+}
+@-webkit-keyframes myfirst /* Safari and Chrome */
+{
+from {transform: rotate(0deg);
+-webkit-transform: rotate(0deg);}
+to{ transform: rotate(-360deg);
+-webkit-transform: rotate(-360deg);}
+}
+
+#afui.android .animate_02 {
+	margin-top: -92%;
+}
+
+#afui.android .animate_02 img {
+	width: 80%;
+	display: block;
+	margin: 0px auto;
+	animation: myfirst2 8s;
+	-webkit-animation: myfirst2 8s; /* Safari and Chrome */
+	animation-iteration-count: infinite; /*循环播放*/
+	-webkit-animation-iteration-count: infinite;
+	animation-timing-function: linear; /*匀速运动*/
+	-webkit-animation-timing-function: linear;
+}
+
+@keyframes myfirst2
+{
+from {
+ transform: rotate(0deg);
+-webkit-transform: rotate(0deg);}
+to{
+ transform: rotate(360deg);
+-webkit-transform: rotate(360deg);}
+}
+@-webkit-keyframes myfirst2 /* Safari and Chrome */
+{
+from {transform: rotate(0deg);
+-webkit-transform: rotate(0deg);}
+to{ transform: rotate(360deg);
+-webkit-transform: rotate(360deg);}
+}
+
+#afui.android .pingfeng {
+	margin-top: -65%;
+}
+
+#afui.android .fs {
+	font-family: fantasy;
+	font-size: 3.8em;
+	color: #fff;
+	text-align: center;
+}
+
+#afui.android .fs span {
+	font-family: "微软雅黑";
+	font-size: 0.5em;
+}
+
+#afui.android .fs_btn {
+	opacity: 0.6;
+}
+
+#afui.android .fs_btn a {
+	border: 2px solid #fff;
+	color: #fff;
+	border-radius: 100px;
+	display: block;
+	width: 40%;
+	margin: 0px auto;
+	line-height: 1.8em;
+	text-align: center;
+	font-size: 1.1em;
+}
+
+#afui.android .head01_animate {
+	background-color: #2391c9;
+	padding: 4% 2% 10% 2%;
+	overflow: hidden;
+}
+
+#afui.android .animate_03 {
+	width: 25%;
+}
+
+#afui.android .animate_04 {
+	width: 25%;
+	margin-top: -23%;
+}
+
+#afui.android .animate_03 img {
+	width: 100%;
+	animation: myfirst3 10s;
+	-webkit-animation: myfirst3 10s; /* Safari and Chrome */
+	animation-iteration-count: infinite; /*循环播放*/
+	-webkit-animation-iteration-count: infinite;
+	animation-timing-function: linear; /*匀速运动*/
+	-webkit-animation-timing-function: linear;
+}
+
+@keyframes myfirst3
+{
+from {
+ transform: rotate(0deg);
+-webkit-transform: rotate(0deg);}
+to{
+ transform: rotate(-360deg);
+-webkit-transform: rotate(-360deg);}
+}
+@-webkit-keyframes myfirst3 /* Safari and Chrome */
+{
+from {transform: rotate(0deg);
+-webkit-transform: rotate(0deg);}
+to{ transform: rotate(-360deg);
+-webkit-transform: rotate(-360deg);}
+}
+
+#afui.android .animate_04 img {
+	width: 73%;
+	margin: 0px auto;
+	display: block;
+	animation: myfirst4 10s;
+	-webkit-animation: myfirst4 10s; /* Safari and Chrome */
+	animation-iteration-count: infinite; /*循环播放*/
+	-webkit-animation-iteration-count: infinite;
+	animation-timing-function: linear; /*匀速运动*/
+	-webkit-animation-timing-function: linear;
+}
+
+@keyframes myfirst4
+{
+from {
+ transform: rotate(0deg);
+-webkit-transform: rotate(0deg);}
+to{
+ transform: rotate(360deg);
+-webkit-transform: rotate(360deg);}
+}
+@-webkit-keyframes myfirst4 /* Safari and Chrome */
+{
+from {transform: rotate(0deg);
+-webkit-transform: rotate(0deg);}
+to{ transform: rotate(360deg);
+-webkit-transform: rotate(360deg);}
+}
+
+#afui.android .pingfeng02 {
+	margin-top: -13.4%;
+	width: 24%;
+	position: absolute;
+	animation: myfirst5 0.5s;
+	-webkit-animation: myfirst5 0.5s; /* Safari and Chrome */
+	animation-iteration-count: 1; /*循环播放*/
+	-webkit-animation-iteration-count: 1;
+	animation-timing-function: linear; /*匀速运动*/
+	-webkit-animation-timing-function: linear;
+}
+
+@keyframes myfirst5
+{
+from {margin-top:0%; width:65%; opacity:0;}
+to{margin-top:-13.4%; width:25%;opacity:1;}
+}
+@-webkit-keyframes myfirst5 /* Safari and Chrome */
+{
+from {margin-top:0%; width:65%;opacity:0;}
+to{margin-top:-13.4%; width:25%;opacity:1;}
+}
+
+#afui.android .fs02 {
+	font-family: fantasy;
+	font-size: 1.8em;
+	color: #fff;
+	text-align: center;
+}
+
+#afui.android .fs03 {
+	font-family: fantasy;
+	font-size: 3em;
+	color: #fff;
+	text-align: center;
+	margin-top: -0.2em;
+}
+
+#afui.android .fs02 span {
+	font-family: "微软雅黑";
+	font-size: 0.5em;
+}
+
+#afui.android .pf_sm li {
+	float: left;
+	width: 18%;
+}
+
+#afui.android .yyuj {
+	color:black;
+	padding: 1.5em;
+	line-height: 170%;
+}
+
+#afui.android .yyuj h4 {
+	font-size: 1.3em;
+}
+
+#afui.android .yyuj p {
+	text-indent: 2em;
+	padding-top: 0.5em;
+}
+
+#afui.android .pf_sm li img {
+	width: 80%
+}
+
+#afui.android .pf_sm h2 {
+	font-size: 1.3em;
+	font-weight: normal;
+}
+
+#afui.android .pf_sm {
+	position: absolute;
+	color: #fff;
+	width: 65%;
+	right: 0px;
+	padding-right: 5%;
+	margin-top: -19%;
+	animation: myfirst6 0.5s;
+	-webkit-animation: myfirst6 0.5s; /* Safari and Chrome */
+	animation-iteration-count: 1; /*循环播放*/
+	-webkit-animation-iteration-count: 1;
+	animation-timing-function: linear; /*匀速运动*/
+	-webkit-animation-timing-function: linear;
+}
+
+@keyframes myfirst6
+{
+from {opacity:0; right:-10%;}
+to{opacity:1;}
+}
+@-webkit-keyframes myfirst6 /* Safari and Chrome */
+{
+from {opacity:0; right:-10%;}
+to{opacity:1;}
+}
+
+#afui.android .pf_sm h1 {
+	font-size: 1.5em;
+}
+
+#afui.android .pf_sm ol {
+	font-size: 0.9em;
+	margin-top: 2%;
+	line-height: 150%;
+}
+
+#afui.android .navlist {
+	color: #666;
+	font-size: 1.2em;
+	font-family: "微软雅黑";
+}
+
+#afui.android .navlist li{ 
+	line-height: 2.9em ;
+	padding-left: 10px;
+	border-bottom: 2px solid #fff;
+}
+
+#afui.android .navheader {
+	color: #ffffff;
+	background: #13699f; 
+	padding-left: 10px;
+}
+
+#afui.android .navicon {
+	background-size:20%;
+	background-repeat:no-repeat;
+	background-position-y:center;
+	padding-left:25% !important;
+}
+
+#afui.android .icon_bsgl {
+	background-image: url("../../images/android/swgj/sy_icon01.png");
+}
+#afui.android .icon_bszj {
+	background-image: url("../../images/android/swgj/sy_icon02.png");
+}
+#afui.android .icon_pzgl {
+	background-image: url("../../images/android/swgj/sy_icon03.png");
+}
+#afui.android .icon_fxyj {
+	background-image: url("../../images/android/swgj/sy_icon04.png");
+}
+#afui.android .icon_yhcsq {
+	background-image: url("../../images/android/swgj/sy_icon05.png");
+}
+#afui.android .icon_nsxydj {
+	background-image: url("../../images/android/swgj/sy_icon06.png");
+}
+
+#afui.android .tpiconlist {
+}
+
+#afui.android .tpiconlist td {
+	text-align: center;
+	background-color:#ececec;
+	padding: 0.8em 0;
+	width: 33.33333333%;
+}
+
+#afui.android .tpiconlist td img {
+	display: block;
+	margin: 0px auto;
+	width: 80%;
+}
+
+#afui.android .tpiconlist td img:active { 
+	position: relative; 
+	top: 3px; 
+}
+
+#afui.android .tphead { 
+	background-color: white;
+	color: black;
+}
+
+#afui.android .tphead td{ 
+	padding: 10px;
+}
+
+#afui.android .icon {
+	background-image: url(../../images/android/common/icon02.png);
+	background-repeat: no-repeat;
+	background-position: center top;
+	height: 300px;
+	margin-top: 23px;
+}
+
+#afui.android .icon span {
+	font-size: 16px;
+	font-weight: bold;
+	color: #222222;
+	padding-top: 200px;
+	display: block;
+	text-align: center;
+}
+
+#afui.android .icon3 {
+	background-image: url(../../images/android/common/icon01.png);
+	background-repeat: no-repeat;
+	background-position: center top;
+	height: 300px;
+	margin-top: 23px;
+}
+
+#afui.android .icon3 span {
+	font-size: 16px;
+	font-weight: bold;
+	color: #222222;
+	padding-top: 200px;
+	display: block;
+	text-align: center;
+}
+
+
+
+/* new 税务管家 */
+
+#afui.android .head_animatenew {
+	background-color: #0d488e;
+	padding: 5%;
+	overflow: hidden;
+	font-family:"微软雅黑";
+}
+#afui.android .head_animatenew .leftsize{ float:left; margin-top: 4%; width:70%;color:#FFF;}
+#afui.android .head_animatenew .leftsize .yhmc font{
+	width:100%;
+	font-size: 1.255em;
+	font-weight: 900;
+	line-height: 30px;
+	}
+#afui.android .head_animatenew .leftsize h3{ line-height:2em; font-size:1em; color:#FFF; font-weight:normal;padding:5px 0; margin:0;}
+#afui.android .head_animatenew .leftsize p{ 
+	line-height:1.8em; 
+	font-size:1.155em; 
+	padding:0; margin:0;
+	}
+#afui.android .head_animatenew .leftsize a{ line-height:1.8em; font-size:0.9em; color:#B8FAFA;}
+#afui.android .head_animatenew .rightcon{ float:right;margin-right: 2%;  width:80px;}
+#afui.android .head_animatenew .rightcon .tximg{display:block; margin:20px auto 0 auto; width:70px; height:70px; }
+#afui.android .head_animatenew .rightcon .tximg img{border-radius: 50%; width:70px; height:70px;}
+#afui.android .head_animatenew .rightcon span{line-height:30px; white-space: nowrap; padding-top:5px; display:block; font-size:0.9em; color:#FFF; text-align:center;}
+#afui.android .iconlistnew td {
+	width:100%;
+	color: #ffffff;
+	padding: 0.3em 0;
+	font-size: 1.1em;
+	border-bottom: 1px solid #e8e8e8;
+	
+}
+
+#afui.android .iconlistnew td:active { 
+	position: relative; 
+	top: 1px; 
+	background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#fff)); 
+	background: -moz-linear-gradient(top, #ffffff, #fff); 
+}
+
+#afui.android .iconlistnew td .lcon{ float:left; width:90%; font-size:0.6em; padding-top:0.4em; color:#57a8d1;}
+#afui.android .iconlistnew td .lcon img{ width:11%; float:left;  margin:0 5%; }
+#afui.android .iconlistnew td .lcon p{ 
+	width:100%;
+	height:100%;
+	margin-top: 5%;
+	opacity: 0.7;
+	margin-left: 8%;
+	}
+#afui.android .iconlistnew td .lico{ float:right; width:7%; margin-right:1%;margin-top:1%; }
+#afui.android .iconlistnew td .lico img{ width:100%;}
+
+#afui.android .iconlistnew td .title{ 
+	width:100%; 
+	display:block;
+	font-size:100%;
+	font-size: 1.2em;
+ 	padding: 0.2em 0 0 0; 
+ 	text-indent:2%; 
+	width:100%; 
+ 	display:block; 
+ 	color:#23427b; 
+ 	position: relative;
+	left: 3%;}
+
+#afui.android .tjlistnew{padding: 10% 0 0% 0;
+	background: url(../../images/android/swgj/white_line.png) no-repeat 2% top;font-family:"微软雅黑";}
+#afui.android .tjlistnew ul{ padding:0; margin:0; list-style:none;}
+#afui.android .tjlistnew li {
+	overflow: hidden;
+}
+#afui.android .tj_limg{ width:17%; float:left;}
+#afui.android .tj_limg img {
+	width:100%;
+}
+
+#afui.android .tj_bar{ width:80%; float:right; border-bottom:1px solid #e1e1e1; padding:0.3em 0 0.4em 0;}
+#afui.android .tj_bart{border-top:1px solid #e1e1e1;}
+#afui.android .tj_namenew {
+	width:70%;
+	float:left;
+}
+
+#afui.android .tj_namenew h3 {
+	color:black;
+	font-weight: normal;
+	font-size: 1em;
+	padding:0.3em 0; 
+	margin:0;
+	color:#00486d;
+}
+#afui.android .tj_namenew p{color:black;font-size:0.8em;padding:0.1em 0;  margin:0; color:#7ec0e2;}
+#afui.android .tj_namenewico{ float:right; width:8%; margin-right:1%; margin-top:7%; }
+#afui.android .tj_namenewico img{ width:100%;}
+
