@@ -1311,9 +1311,9 @@ $(".hk-box").on("touchend", function(e) {
     }
     //右滑
     else if ( X > 0 ) {
-        //$(e.currentTarget).hide();
-        //$(e.currentTarget).parent().prev('.hk-box').show();
-        console.log($(e.currentTarget).prev().innerHTML);
+        $(e.currentTarget).hide();
+        $(e.currentTarget.previousElementSibling).show();
+
     }
 });
 </script>
