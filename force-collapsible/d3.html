@@ -62,15 +62,16 @@
 
 
 
-<meta name="description" content="没啥好分享，就记录下自己成长的点滴">
+<meta name="description" content="circle.node {   cursor: pointer;   stroke: #000;   stroke-width: .5px; }  line.link {   fill: none;   stroke: #9ecae1;   stroke-width: 1.5px; }                        Flare code">
 <meta property="og:type" content="website">
 <meta property="og:title" content="TeraTimes成长记">
-<meta property="og:url" content="//www.howitworks.cn/categories/学习成长/index.html">
+<meta property="og:url" content="//www.howitworks.cn/force-collapsible/d3.html">
 <meta property="og:site_name" content="TeraTimes成长记">
-<meta property="og:description" content="没啥好分享，就记录下自己成长的点滴">
+<meta property="og:description" content="circle.node {   cursor: pointer;   stroke: #000;   stroke-width: .5px; }  line.link {   fill: none;   stroke: #9ecae1;   stroke-width: 1.5px; }                        Flare code">
+<meta property="og:updated_time" content="2017-10-30T12:09:14.873Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="TeraTimes成长记">
-<meta name="twitter:description" content="没啥好分享，就记录下自己成长的点滴">
+<meta name="twitter:description" content="circle.node {   cursor: pointer;   stroke: #000;   stroke-width: .5px; }  line.link {   fill: none;   stroke: #9ecae1;   stroke-width: 1.5px; }                        Flare code">
 
 
 
@@ -98,13 +99,13 @@
 
 
 
-  <link rel="canonical" href="//www.howitworks.cn/categories/学习成长/"/>
+  <link rel="canonical" href="//www.howitworks.cn/force-collapsible/d3.html"/>
 
 
 
 
 
-  <title>分类: 学习成长 | TeraTimes成长记</title>
+  <title> | TeraTimes成长记</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -224,187 +225,168 @@
           <div id="content" class="content">
             
 
-  <section id="posts" class="posts-collapse">
-    <div class="collection-title">
-      <h2 >
-        学习成长
-        <small>分类</small>
-      </h2>
-    </div>
+  <div id="posts" class="posts-expand">
+  <header class="post-header">
 
+	<h2 class="post-title" itemprop="name headline"></h2>
+
+
+
+</header>
+
+    
     
       
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <link type="text/css" rel="stylesheet" href="style.css">
+    <style type="text/css">
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+circle.node {
+  cursor: pointer;
+  stroke: #000;
+  stroke-width: .5px;
+}
 
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/05/16/No-Passion-No-Growth/" itemprop="url">
-              
-                <span itemprop="name">没有激情的进步都是假成长</span>
-              
-            </a>
-        
-      </h2>
+line.link {
+  fill: none;
+  stroke: #9ecae1;
+  stroke-width: 1.5px;
+}
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-05-16T19:44:19+08:00"
-              content="2018-05-16" >
-          05-16
-        </time>
-      </div>
+    </style>
+  </head>
+  <body>
+    <h2>
+      Flare code size<br>
+      force-directed graph
+    </h2>
+    <script type="text/javascript" src="d3/d3.js"></script>
+    <script type="text/javascript" src="d3/d3.geom.js"></script>
+    <script type="text/javascript" src="d3/d3.layout.js"></script>
+    <script type="text/javascript">
 
-    </header>
-  </article>
+var w = 1280,
+    h = 800,
+    node,
+    link,
+    root;
 
+var force = d3.layout.force()
+    .on("tick", tick)
+    .charge(function(d) { return d._children ? -d.size / 100 : -30; })
+    .linkDistance(function(d) { return d.target._children ? 80 : 30; })
+    .size([w, h - 160]);
 
-    
-      
+var vis = d3.select("body").append("svg:svg")
+    .attr("width", w)
+    .attr("height", h);
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+d3.json("flare.json", function(json) {
+  root = json;
+  root.fixed = true;
+  root.x = w / 2;
+  root.y = h / 2 - 80;
+  update();
+});
 
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/09/13/Dont-stop/" itemprop="url">
-              
-                <span itemprop="name">不要停下来</span>
-              
-            </a>
-        
-      </h2>
+function update() {
+  var nodes = flatten(root),
+      links = d3.layout.tree().links(nodes);
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-09-13T17:17:46+08:00"
-              content="2017-09-13" >
-          09-13
-        </time>
-      </div>
+  // Restart the force layout.
+  force
+      .nodes(nodes)
+      .links(links)
+      .start();
 
-    </header>
-  </article>
+  // Update the links…
+  link = vis.selectAll("line.link")
+      .data(links, function(d) { return d.target.id; });
 
+  // Enter any new links.
+  link.enter().insert("svg:line", ".node")
+      .attr("class", "link")
+      .attr("x1", function(d) { return d.source.x; })
+      .attr("y1", function(d) { return d.source.y; })
+      .attr("x2", function(d) { return d.target.x; })
+      .attr("y2", function(d) { return d.target.y; });
 
-    
-      
+  // Exit any old links.
+  link.exit().remove();
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  // Update the nodes…
+  node = vis.selectAll("circle.node")
+      .data(nodes, function(d) { return d.id; })
+      .style("fill", color);
 
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/09/11/we-are-different/" itemprop="url">
-              
-                <span itemprop="name">我们不一样</span>
-              
-            </a>
-        
-      </h2>
+  node.transition()
+      .attr("r", function(d) { return d.children ? 4.5 : Math.sqrt(d.size) / 10; });
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-09-11T17:17:46+08:00"
-              content="2017-09-11" >
-          09-11
-        </time>
-      </div>
+  // Enter any new nodes.
+  node.enter().append("svg:circle")
+      .attr("class", "node")
+      .attr("cx", function(d) { return d.x; })
+      .attr("cy", function(d) { return d.y; })
+      .attr("r", function(d) { return d.children ? 4.5 : Math.sqrt(d.size) / 10; })
+      .style("fill", color)
+      .on("click", click)
+      .call(force.drag);
 
-    </header>
-  </article>
+  // Exit any old nodes.
+  node.exit().remove();
+}
 
+function tick() {
+  link.attr("x1", function(d) { return d.source.x; })
+      .attr("y1", function(d) { return d.source.y; })
+      .attr("x2", function(d) { return d.target.x; })
+      .attr("y2", function(d) { return d.target.y; });
 
-    
-      
+  node.attr("cx", function(d) { return d.x; })
+      .attr("cy", function(d) { return d.y; });
+}
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+// Color leaf nodes orange, and packages white or blue.
+function color(d) {
+  return d._children ? "#3182bd" : d.children ? "#c6dbef" : "#fd8d3c";
+}
 
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/09/06/Have-you-been-finance-free/" itemprop="url">
-              
-                <span itemprop="name">你实现财务自由了吗？</span>
-              
-            </a>
-        
-      </h2>
+// Toggle children on click.
+function click(d) {
+  if (d.children) {
+    d._children = d.children;
+    d.children = null;
+  } else {
+    d.children = d._children;
+    d._children = null;
+  }
+  update();
+}
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-09-06T15:12:15+08:00"
-              content="2017-09-06" >
-          09-06
-        </time>
-      </div>
+// Returns a list of all nodes under the root.
+function flatten(root) {
+  var nodes = [], i = 0;
 
-    </header>
-  </article>
+  function recurse(node) {
+    if (node.children) node.size = node.children.reduce(function(p, v) { return p + recurse(v); }, 0);
+    if (!node.id) node.id = ++i;
+    nodes.push(node);
+    return node.size;
+  }
 
+  root.size = recurse(root);
+  return nodes;
+}
 
-    
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/09/06/Template/" itemprop="url">
-              
-                <span itemprop="name">写作框架</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-09-06T15:12:15+08:00"
-              content="2017-09-06" >
-          09-06
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-    
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/08/28/Tera-Times-Growth/" itemprop="url">
-              
-                <span itemprop="name">万亿倍成长开篇语</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-08-28T19:44:19+08:00"
-              content="2017-08-28" >
-          08-28
-        </time>
-      </div>
-
-    </header>
-  </article>
-
+    </script>
+  </body>
+</html>
 
     
-  </section>
-
-  
-
+  </div>
 
 
           </div>
@@ -412,6 +394,12 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div id="SOHUCS"></div>
+    
+  </div>
+
 
         </div>
         
@@ -460,8 +448,8 @@
 <div class="copyright">
   Copyright
   
-  &copy;  2017 - 
-  <span itemprop="copyrightYear">2018</span>
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
