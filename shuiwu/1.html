@@ -1306,27 +1306,11 @@ $(".hk-box").on("touchend", function(e) {
     Y = moveEndY - startY;
     //左滑
     if ( X > 0 ) {
-        opt.message="左滑";
-		$.ui.popup(opt);              
+        console.log(e.target.htm());            
     }
     //右滑
     else if ( X < 0 ) {
-        opt.message="右滑";
-		$.ui.popup(opt);
-    }
-    //下滑
-    else if ( Y > 0) {
-        opt.message="下滑";
-		$.ui.popup(opt);
-    }
-    //上滑
-    else if ( Y < 0 ) {
-        opt.message="上滑";
-		$.ui.popup(opt); 
-    }
-    //单击
-    else{
-        alert('单击');    
+        console.log(e.target.htm());  
     }
 });
 </script>
