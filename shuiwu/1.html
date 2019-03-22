@@ -1310,9 +1310,9 @@ $(".hk-box").on("touchend", function(e) {
         $(e.currentTarget).next().show();
     }
     //右滑
-    else if ( X > 0 && e.currentTarget.previousElementSibling) {
+    else if ( X > 0 && $(e.currentTarget).prev('div.hk-box')) {
         $(e.currentTarget).hide();
-        $(e.currentTarget.previousElementSibling).show();
+        $(e.currentTarget).prev('div.hk-box').show();
 
     }
 });
