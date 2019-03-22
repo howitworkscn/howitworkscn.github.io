@@ -1307,12 +1307,12 @@ $(".hk-box").on("touchend", function(e) {
     //左滑
     if ( X < 0 ) {
         $(e.currentTarget).hide();
-        $(e.currentTarget).next().show();         
+        $(e.currentTarget).next().show();
     }
     //右滑
     else if ( X > 0 ) {
-        $(e.currentTarget).prev().show();  
-        $(e.currentTarget).hide();    
+        $(e.currentTarget).hide();
+        $(e.currentTarget).parent().prev('.hk-box').show();
     }
 });
 </script>
