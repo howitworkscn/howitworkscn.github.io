@@ -620,11 +620,11 @@ function callJsonP(callBack){
                 $.ui.unblockUI();
         	}
             if(arg1=="timeout"){
-                opt.message="连接超时！";
-                $.ui.popup(opt);
+                //opt.message="连接超时！";
+                //$.ui.popup(opt);
             }else if(arg1=="error"){
-                opt.message="系统异常！";
-                $.ui.popup(opt);
+                //opt.message="系统异常！";
+                //$.ui.popup(opt);
             }
         }
     });
