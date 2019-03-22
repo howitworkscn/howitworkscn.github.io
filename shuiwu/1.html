@@ -1309,16 +1309,17 @@ $(".hk-box").on("touchend", function(e) {
     X = moveEndX - startX,
     Y = moveEndY - startY;
     
+    var idx = $(e.currentTarget).attr("data-no");
+    var parent = $(e.currentTarget).parent();
     //左滑
-    if ( X < 0 && $(e.currentTarget).next()) {
+    if ( X < 0 && idx < 12) {
         $(e.currentTarget).hide();
-        $(e.currentTarget).next().show();
+        parent.find('div.hk-box:nth-child('+(idx + 1)+')').show();
     }
     //右滑
-    else if ( X > 0) {
-        console.log($(e.currentTarget).prev('div.hk-box').html());
+    else if ( X > 0 && idx > 1) {
         $(e.currentTarget).hide();
-        $(e.currentTarget).prev('div.hk-box').show();
+        parent.find('div.hk-box:nth-child('+(idx - 1)+')').show();
 
     }
 });
