@@ -1289,8 +1289,8 @@ $(".hk-box").on("touchstart", function(e) {
             e.preventDefault();
         }
     }   
-    startX = e.targetTouches[0].pageX,
-    startY = e.targetTouches[0].pageY;
+    startX = e.originalEvent.targetTouches[0].pageX,
+    startY = e.originalEvent.targetTouches[0].pageY;
 });
 $(".hk-box").on("touchend", function(e) {         
     // 判断默认行为是否可以被禁用
@@ -1300,8 +1300,8 @@ $(".hk-box").on("touchend", function(e) {
             e.preventDefault();
         }
     }               
-    moveEndX = e.targetTouches[0].pageX,
-    moveEndY = e.targetTouches[0].pageY,
+    moveEndX = e.originalEvent.changedTouches[0].pageX,
+    moveEndY = e.originalEvent.changedTouches[0].pageY,
     X = moveEndX - startX,
     Y = moveEndY - startY;
     //左滑
