@@ -1280,7 +1280,7 @@
 
 <div id="afui_mask" class="ui-loader" afmoldstyle="block" style="display: none;"><span class="ui-icon ui-icon-loading spin"></span><h1>请稍候...</h1></div>
 
-$("body").on("touchstart", function(e) {
+$(".hk-box").on("touchstart", function(e) {
     // 判断默认行为是否可以被禁用
     if (e.cancelable) {
         // 判断默认行为是否已经被禁用
@@ -1291,7 +1291,7 @@ $("body").on("touchstart", function(e) {
     startX = e.originalEvent.changedTouches[0].pageX,
     startY = e.originalEvent.changedTouches[0].pageY;
 });
-$("body").on("touchend", function(e) {         
+$(".hk-box").on("touchend", function(e) {         
     // 判断默认行为是否可以被禁用
     if (e.cancelable) {
         // 判断默认行为是否已经被禁用
@@ -1305,19 +1305,23 @@ $("body").on("touchend", function(e) {
     Y = moveEndY - startY;
     //左滑
     if ( X > 0 ) {
-        alert('左滑');                
+        opt.message="左滑";
+		$.ui.popup(opt);              
     }
     //右滑
     else if ( X < 0 ) {
-        alert('右滑');    
+        opt.message="右滑";
+		$.ui.popup(opt);
     }
     //下滑
     else if ( Y > 0) {
-        alert('下滑');    
+        opt.message="下滑";
+		$.ui.popup(opt);
     }
     //上滑
     else if ( Y < 0 ) {
-        alert('上滑');    
+        opt.message="上滑";
+		$.ui.popup(opt); 
     }
     //单击
     else{
